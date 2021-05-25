@@ -1,12 +1,11 @@
 // Copyright 2021 valvarl
 
-#ifndef TP_LAB_9_TASK1_H
-#define TP_LAB_9_TASK1_H
+#ifndef INCLUDE_TASK1_H_
+#define INCLUDE_TASK1_H_
 
+#include <functional>
 
-class task1 {
+template<typename T, int N>
+void bubble_sort(T (*arr)[N], const std::function<bool(T, T)>& comp);
 
-};
-
-
-#endif //TP_LAB_9_TASK1_H
+#endif  // INCLUDE_TASK1_H_

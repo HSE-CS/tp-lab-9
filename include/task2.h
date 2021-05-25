@@ -1,12 +1,11 @@
 // Copyright 2021 valvarl
 
-#ifndef TP_LAB_9_TASK2_H
-#define TP_LAB_9_TASK2_H
+#ifndef INCLUDE_TASK2_H_
+#define INCLUDE_TASK2_H_
 
 
 class task2 {
 
 };
 
-
-#endif //TP_LAB_9_TASK2_H
+#endif  // INCLUDE_TASK2_H_
