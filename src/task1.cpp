@@ -1,7 +1,6 @@
 // Copyright 2021 valvarl
 
 #include <task1.h>
-#include <iostream>
 
 template<typename T, int N>
 void bubble_sort(T (*arr)[N], const std::function<bool(T, T)>& comp) {
