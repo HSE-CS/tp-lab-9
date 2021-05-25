@@ -3,6 +3,7 @@
 #include <iostream>
 #include "task1.cpp"
 
+
 int main() {
     int arr_int[] = {1, 6, 10, 64, 7, 5, 8, 1, 7, 15, 18, 20, 26};
     bubble_sort<int>(&arr_int, [](int a, int b) {return a > b;});

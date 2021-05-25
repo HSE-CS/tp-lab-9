@@ -3,9 +3,10 @@
 #ifndef INCLUDE_TASK3_H_
 #define INCLUDE_TASK3_H_
 
+#include <random>
 
-class task3 {
+std::minstd_rand simple_rand;
 
-};
+void service(std::deque<std::vector<int>*>* line_customers, int active);
 
 #endif  // INCLUDE_TASK3_H_
