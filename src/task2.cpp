@@ -1,8 +1,8 @@
 // Copyright 2021 valvarl
 
-#include <iostream>
-#include <zconf.h>
 #include "task2.h"
+#include <zconf.h>
+#include <iostream>
 
 
 std::function comp{
@@ -27,7 +27,6 @@ void step_print(T (*arr)[N], const bool *work, std::mutex& mtx) {
 template<typename T, int N>
 void bubble_sort(T (*arr)[N], const std::function<bool(T, T)>& comparator,
                  bool *work, std::mutex& mtx) {
-
     for (int i = 0; i < N; i++) {
         usleep(50000);
         mtx.lock();

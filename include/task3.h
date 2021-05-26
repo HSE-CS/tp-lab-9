@@ -4,6 +4,8 @@
 #define INCLUDE_TASK3_H_
 
 #include <random>
+#include <deque>
+#include <vector>
 
 std::minstd_rand simple_rand;
 

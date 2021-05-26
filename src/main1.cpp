@@ -26,7 +26,7 @@ int main() {
     for (int i{ 0 }; i < 6; i++) std::cout << arr_string[i] << ' ';
     std::cout << std::endl;
 
-    std::string arr_string2[] = {"ff", "ccc","aa", "bbbb", "ddddddd", "e"};
+    std::string arr_string2[] = {"ff", "ccc", "aa", "bbbb", "ddddddd", "e"};
     bubble_sort<std::string>(&arr_string2,
                              [](const std::string& a, const std::string& b) {
                                  return a > b;
@@ -35,7 +35,7 @@ int main() {
     for (int i{ 0 }; i < 6; i++) std::cout << arr_string2[i] << ' ';
     std::cout << std::endl;
 
-    std::string arr_string3[] = {"ff", "ccc","aa", "bbbb", "ddddddd", "e"};
+    std::string arr_string3[] = {"ff", "ccc", "aa", "bbbb", "ddddddd", "e"};
     bubble_sort<std::string>(&arr_string3,
                              [](const std::string& a, const std::string& b) {
                                     if (a.length() > b.length()) {
