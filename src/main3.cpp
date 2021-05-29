@@ -24,9 +24,9 @@ int main() {
     for (int cl = 0; cl < 30; ++cl) {
         for (int i = 0; i < std::rand()% 5 + 1; ++i) {
             std::string buf;
-            int maxrange = rand() % 10 + 1;
+            int maxrange = std::rand() % 10 + 1;
             for (int range = 0; range < maxrange; ++range) {
-                buf.push_back((char)(rand() % 254 + 1));
+                buf.push_back(static_cast<char>(std::rand() % 254 + 1));
             }
             v.push_back(buf);
             buf = "";

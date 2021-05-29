@@ -15,12 +15,7 @@ std::thread* Shop::addRegister(Client* client) {
     return th;
 }
 
-void Shop::closeRegister() {
-
-}
-
 void Shop::run(std::vector<Client*> clients) {
-    //std::cout << clients[8]->getProduct() << std::endl;
     std::vector<std::thread*> threads;
     std::vector<std::atomic<bool>> threadscheck;
     for (Client* a : clients) {
@@ -38,7 +33,6 @@ void Shop::run(std::vector<Client*> clients) {
             if (!findRegister) {
                 threads.push_back(addRegister(a));
             }
-
         }
         std::this_thread::sleep_for(
             std::chrono::milliseconds(std::rand() % 1000));
