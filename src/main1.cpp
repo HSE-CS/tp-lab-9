@@ -21,24 +21,7 @@ int main() {
         "orange",
         "bread", "meat", "fish" };
 
-    bubblesort(v, [](std::string a, std::string b)
+    v = bubblesort(v, [](std::string a, std::string b)
         {return a.length() > b.length(); });
     printsorted(v);
-    std::cout << "\n";
-    bubblesort(v, [](std::string a, std::string b)
-        {return a.length() < b.length(); });
-    printsorted(v);
-    std::cout << "\n";
-    bubblesort(v, [](std::string a, std::string b)
-        {return a < b; });
-    printsorted(v);
-    std::cout << "\n";
-    bubblesort(v, [](std::string a, std::string b)
-        {return a > b; });
-    printsorted(v);
-    std::cout << "\n";
-    bubblesort(v, [](std::string a, std::string b)
-        {return a[0] < b[0]; });
-    printsorted(v);
-    std::cout << "\n";
 }

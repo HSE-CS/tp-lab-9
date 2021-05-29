@@ -1,7 +1,7 @@
 //  Copyright Baklanov 2021
 #include "task1.h"
 
-void bubblesort(const std::vector<std::string>& vec,
+std::vector<std::string> bubblesort(const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator) {
     std::vector<std::string> v(vec);
     for (unsigned int i = 0; i < v.size() - 1; ++i) {
