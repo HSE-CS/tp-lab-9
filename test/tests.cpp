@@ -14,7 +14,7 @@ TEST(Sort, TEST1) {
         {return a.length() > b.length(); });
     std::vector<std::string> answer = { "milk",
         "meat", "fish", "bread", "orange" };
-    EXPECT_EQ(answer, v);
+    EXPECT_EQ(answer, products);
 }
 
 TEST(Sort, TEST2) {
@@ -24,7 +24,7 @@ TEST(Sort, TEST2) {
         {return a.length() < b.length(); });
     std::vector<std::string> answer = { "orange",
         "bread", "milk", "meat", "fish" };
-    EXPECT_EQ(answer, v);
+    EXPECT_EQ(answer, products);
 }
 
 TEST(Sort, TEST3) {
@@ -34,7 +34,7 @@ TEST(Sort, TEST3) {
         {return a < b; });
     std::vector<std::string> answer = { "orange",
         "milk", "meat", "fish", "bread" };
-    EXPECT_EQ(answer, v);
+    EXPECT_EQ(answer, products);
 }
 
 TEST(Sort, TEST4) {
@@ -44,7 +44,7 @@ TEST(Sort, TEST4) {
         {return a > b; });
     std::vector<std::string> answer = { "bread",
         "fish", "meat", "milk", "orange" };
-    EXPECT_EQ(answer, v);
+    EXPECT_EQ(answer, products);
 }
 
 TEST(Sort, TEST5) {
@@ -54,5 +54,5 @@ TEST(Sort, TEST5) {
         {return a[0] < b[0]; });
     std::vector<std::string> answer = { "orange",
         "meat", "milk", "fish", "bread" };
-    EXPECT_EQ(answer, v);
+    EXPECT_EQ(answer, products);
 }
