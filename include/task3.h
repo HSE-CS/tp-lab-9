@@ -1,20 +1,21 @@
+//  Copyright Baklanov 2021
 #pragma once
-
 #include <iostream>
 #include <vector>
+#include <mutex>
+#include <thread>
+#include <atomic>
+#include <chrono>
 #include <functional>
 #include <string>
-#include <chrono>
 #include <queue>
-#include <thread>
-#include <mutex>
 
 class Client {
-private:
+ private:
     std::vector<std::string> products;
 
-public:
-    Client(std::vector<std::string> products_) :
+ public:
+    explicit Client(std::vector<std::string> products_) :
         products(products_) {}
     void addProduct(std::string product) {
         products.push_back(product);
@@ -28,17 +29,16 @@ public:
         }
         return "";
     }
-
 };
 
 class Register {
-private:
+ private:
     std::queue<Client*> clients;
     int number;
     bool full;
     bool jobisdone;
 
-public:
+ public:
     Register() :
         number(0), full(false), jobisdone(false) {}
     void addClient(Client* client) {
@@ -65,7 +65,7 @@ public:
                 clients.pop();
             }
         }
-    };
+    }
     bool isFull() {
         return full;
     }
@@ -75,10 +75,10 @@ public:
 };
 
 class Shop {
-private:
+ private:
     std::vector<Register*> registers;
 
-public:
+ public:
     std::thread* addRegister(Client* client);
     void closeRegister();
     void run(std::vector<Client*> clients);

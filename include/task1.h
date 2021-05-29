@@ -1,3 +1,4 @@
+//  Copyright Baklanov 2021
 #pragma once
 
 #include <iostream>
@@ -5,5 +6,5 @@
 #include <functional>
 #include <string>
 
-void bubblesort(std::vector<std::string>& v,
+void bubblesort(const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator);
