@@ -1,10 +1,5 @@
+//  Copyright Baklanov 2021
 #include "task3.h"
-#include <iostream>
-#include <vector>
-#include <mutex>
-#include <thread>
-#include <atomic>
-#include <chrono>
 
 int number = 1;
 
@@ -45,7 +40,8 @@ void Shop::run(std::vector<Client*> clients) {
             }
 
         }
-        std::this_thread::sleep_for(std::chrono::milliseconds(std::rand() % 1000));
+        std::this_thread::sleep_for(
+            std::chrono::milliseconds(std::rand() % 1000));
     }
     for (Register* a : registers) {
         a->setDone();

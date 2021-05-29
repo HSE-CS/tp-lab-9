@@ -1,11 +1,9 @@
+//  Copyright Baklanov 2021
 #include "task2.h"
-#include <iostream>
-#include <vector>
-#include <mutex>
-#include <thread>
 
-void bubblesort2(std::vector<std::string>& v,
+void bubblesort2(const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator) {
+    std::vector<std::string> v(vec);
     std::mutex a;
     for (unsigned int i = 0; i < v.size() - 1; ++i) {
         std::thread th([&v, &comparator, &a, &i]() { 

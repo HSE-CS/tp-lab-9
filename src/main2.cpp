@@ -1,11 +1,12 @@
-#include "task1.h"
-#include "task2.h"
-#include "task3.h"
+//  Copyright Baklanov 2021
 #include <iostream>
 #include <vector>
 #include <string>
 #include <thread>
 #include <mutex>
+#include "task1.cpp"
+#include "task2.cpp"
+#include "task3.cpp"
 
 void printsorted(std::vector<std::string> v) {
     std::cout << "{ ";
