@@ -1,7 +1,5 @@
 //  Copyright Baklanov 2021
 #include "../include/task1.h"
-#include "../include/task2.h"
-#include "../include/task3.h"
 #include <gtest/gtest.h>
 #include <string>
 #include <vector>
@@ -10,7 +8,7 @@
 TEST(Sort, TEST1) {
     std::vector<std::string> products = { "milk",
         "orange", "bread", "meat", "fish" };
-    bubblesort(products, [](std::string a, std::string b)
+    products = bubblesort(products, [](std::string a, std::string b)
         {return a.length() > b.length(); });
     std::vector<std::string> answer = { "milk",
         "meat", "fish", "bread", "orange" };
@@ -20,7 +18,7 @@ TEST(Sort, TEST1) {
 TEST(Sort, TEST2) {
     std::vector<std::string> products = { "milk",
         "orange", "bread", "meat", "fish" };
-    bubblesort(products, [](std::string a, std::string b)
+    products = bubblesort(products, [](std::string a, std::string b)
         {return a.length() < b.length(); });
     std::vector<std::string> answer = { "orange",
         "bread", "milk", "meat", "fish" };
@@ -30,7 +28,7 @@ TEST(Sort, TEST2) {
 TEST(Sort, TEST3) {
     std::vector<std::string> products = { "milk",
         "orange", "bread", "meat", "fish" };
-    bubblesort(products, [](std::string a, std::string b)
+    products = bubblesort(products, [](std::string a, std::string b)
         {return a < b; });
     std::vector<std::string> answer = { "orange",
         "milk", "meat", "fish", "bread" };
@@ -40,7 +38,7 @@ TEST(Sort, TEST3) {
 TEST(Sort, TEST4) {
     std::vector<std::string> products = { "milk",
         "orange", "bread", "meat", "fish" };
-    bubblesort(products, [](std::string a, std::string b)
+    products = bubblesort(products, [](std::string a, std::string b)
         {return a > b; });
     std::vector<std::string> answer = { "bread",
         "fish", "meat", "milk", "orange" };
@@ -50,7 +48,7 @@ TEST(Sort, TEST4) {
 TEST(Sort, TEST5) {
     std::vector<std::string> products = { "milk",
         "orange", "bread", "meat", "fish" };
-    bubblesort(products, [](std::string a, std::string b)
+    products = bubblesort(products, [](std::string a, std::string b)
         {return a[0] < b[0]; });
     std::vector<std::string> answer = { "orange",
         "meat", "milk", "fish", "bread" };
