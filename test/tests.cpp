@@ -1,5 +1,7 @@
 //  Copyright Baklanov 2021
 #include "../include/task1.h"
+#include "../include/task2.h"
+#include "../include/task3.h"
 #include <gtest/gtest.h>
 #include <string>
 #include <vector>
