@@ -80,6 +80,5 @@ class Shop {
 
  public:
     std::thread* addRegister(Client* client);
-    void closeRegister();
     void run(std::vector<Client*> clients);
 };
