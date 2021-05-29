@@ -51,6 +51,6 @@ TEST(Sort, TEST5) {
     products = bubblesort(products, [](std::string a, std::string b)
         {return a[0] < b[0]; });
     std::vector<std::string> answer = { "orange",
-        "meat", "milk", "fish", "bread" };
+        "milk", "meat", "fish", "bread" };
     EXPECT_EQ(answer, products);
 }
