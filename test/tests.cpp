@@ -137,7 +137,7 @@ TEST(Task2, test2) {
   std::vector<std::vector<std::string>> expect =
   {{"summer", "is", "coming"}, {"summer", "coming", "is"},
             {"coming", "summer", "is"}, {"coming", "summer", "is"},
-  {"coming", "summer", "is"}, {"coming", "summer", "is"}}
+  {"coming", "summer", "is"}, {"coming", "summer", "is"}};
   EXPECT_EQ(expect, printed);
 }
 
@@ -163,7 +163,7 @@ TEST(Task2, test3) {
   std::vector<std::vector<std::string>> expect =
   {{"is", "summer", "coming"}, {"is", "summer", "coming"},
             {"is", "summer", "coming"}, {"is", "summer", "coming"},
-  {"is", "summer", "coming"}, {"is", "summer", "coming"}}
+  {"is", "summer", "coming"}, {"is", "summer", "coming"}};
   EXPECT_EQ(expect, printed);
 }
 
@@ -189,7 +189,7 @@ TEST(Task2, test4) {
   std::vector<std::vector<std::string>> expect =
   {{"summer", "is", "coming"}, {"summer", "coming", "is"},
             {"coming", "summer", "is"}, {"coming", "summer", "is"},
-  {"coming", "summer", "is"}, {"coming", "summer", "is"}}
+  {"coming", "summer", "is"}, {"coming", "summer", "is"}};
   EXPECT_EQ(expect, printed);
 }
 
@@ -215,7 +215,7 @@ TEST(Task2, test5) {
   std::vector<std::vector<std::string>> expect =
   {{"is", "summer", "coming"}, {"is", "coming", "summer"},
             {"coming", "is", "summer"}, {"coming", "is", "summer"},
-  {"coming", "is", "summer"}, {"coming", "is", "summer"}}
+  {"coming", "is", "summer"}, {"coming", "is", "summer"}};
   EXPECT_EQ(expect, printed);
 }
 
