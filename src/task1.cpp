@@ -2,7 +2,7 @@
 #include "task1.h"
 
 void print(std::vector<std::string> &_arr) {
-  for(auto x : _arr) {
+  for (auto x : _arr) {
     std::cout << x << ' ';
   }
   std::cout << '\n';

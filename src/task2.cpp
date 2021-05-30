@@ -28,7 +28,7 @@ void simpleBubbleSort(std::vector<std::string> &_arr,
 }
 
 void printVectStr(std::vector<std::string> &_arr) {
-  for(auto x : _arr) {
+  for (auto x : _arr) {
     std::cout << x << ' ';
   }
   std::cout << '\n';

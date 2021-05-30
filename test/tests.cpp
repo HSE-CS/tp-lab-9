@@ -18,14 +18,18 @@ TEST(Task1, test1) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) { return x < y; });
-  EXPECT_EQ({"coming", "dear", "friends", "is", "my", "summer"}, vectStr);
+  std::vector<std::string> expect =
+  {"coming", "dear", "friends", "is", "my", "summer"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task1, test2) {
   std::vector<std::string> vectStr = {"Summer", "is", "coming",
   "my", "Dear", "Friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) { return x < y; });
-  EXPECT_EQ({"Dear", "Friends", "Summer", "coming", "is", "my"}, vectStr);
+  std::vector<std::string> expect =
+  {"Dear", "Friends", "Summer", "coming", "is", "my"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task1, test3) {
@@ -33,7 +37,9 @@ TEST(Task1, test3) {
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
              return x.back() < y.back(); });
-  EXPECT_EQ({"coming", "dear", "summer", "friends", "is", "my"}, vectStr);
+  std::vector<std::string> expect =
+  {"coming", "dear", "summer", "friends", "is", "my"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task1, test4) {
@@ -41,7 +47,9 @@ TEST(Task1, test4) {
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
              return x[x.size() / 2] < y[y.size() / 2]; });
-  EXPECT_EQ({"dear", "friends", "coming", "summer", "is", "my"}, vectStr);
+  std::vector<std::string> expect =
+  {"dear", "friends", "coming", "summer", "is", "my"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task1, test5) {
@@ -49,7 +57,9 @@ TEST(Task1, test5) {
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
              return x.size() < y.size(); });
-  EXPECT_EQ({"is", "my", "dear", "coming", "summer", "friends"}, vectStr);
+  std::vector<std::string> expect =
+  {"is", "my", "dear", "coming", "summer", "friends"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task1, test6) {
@@ -60,7 +70,9 @@ TEST(Task1, test6) {
     std::reverse(x.begin(), y.end());
     return x < y;
   });
-  EXPECT_EQ({"coming", "dear", "friends", "is", "my", "summer"}, vectStr);
+  std::vector<std::string> expect =
+  {"coming", "dear", "friends", "is", "my", "summer"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task1, test7) {
@@ -72,7 +84,9 @@ TEST(Task1, test7) {
     std::remove(y.begin(), y.end(), b);
     return x < y;
   });
-  EXPECT_EQ({"dear", "coming", "friends", "is", "summer", "my"}, vectStr);
+  std::vector<std::string> expect =
+  {"dear", "coming", "friends", "is", "summer", "my"};
+  EXPECT_EQ(expect, vectStr);
 }
 
 TEST(Task2, test1) {
@@ -81,7 +95,7 @@ TEST(Task2, test1) {
   -> bool { return x < y; };
   std::thread myThread(simpleBubbleSort, std::ref(vectStr), comp);
   std::vector<std::vector<std::string>> printed;
-  while(!isSorted) {
+  while (!isSorted) {
     std::unique_lock<std::mutex> unqLock(myMutex);
     condVar.wait(unqLock, [](){ return isStepped; });
     printed.push_back(vectStr);
@@ -94,9 +108,11 @@ TEST(Task2, test1) {
   isPrinted = true;
   isStepped = false;
   isSorted = false;
-  EXPECT_EQ({{"is", "summer", "coming"}, {"is", "coming", "summer"},
+  std::vector<std::vector<std::string>> expect =
+  {{"is", "summer", "coming"}, {"is", "coming", "summer"},
             {"coming", "is", "summer"}, {"coming", "is", "summer"},
-{"coming", "is", "summer"}, {"coming", "is", "summer"}}, printed);
+  {"coming", "is", "summer"}, {"coming", "is", "summer"}};
+  EXPECT_EQ(expect, printed);
 }
 
 TEST(Task2, test2) {
@@ -105,7 +121,7 @@ TEST(Task2, test2) {
   -> bool { return x.back() < y.back(); };
   std::thread myThread(simpleBubbleSort, std::ref(vectStr), comp);
   std::vector<std::vector<std::string>> printed;
-  while(!isSorted) {
+  while (!isSorted) {
     std::unique_lock<std::mutex> unqLock(myMutex);
     condVar.wait(unqLock, [](){ return isStepped; });
     printed.push_back(vectStr);
@@ -118,9 +134,11 @@ TEST(Task2, test2) {
   isPrinted = true;
   isStepped = false;
   isSorted = false;
-  EXPECT_EQ({{"summer", "is", "coming"}, {"summer", "coming", "is"},
+  std::vector<std::vector<std::string>> expect =
+  {{"summer", "is", "coming"}, {"summer", "coming", "is"},
             {"coming", "summer", "is"}, {"coming", "summer", "is"},
-{"coming", "summer", "is"}, {"coming", "summer", "is"}}, printed);
+  {"coming", "summer", "is"}, {"coming", "summer", "is"}}
+  EXPECT_EQ(expect, printed);
 }
 
 TEST(Task2, test3) {
@@ -129,7 +147,7 @@ TEST(Task2, test3) {
   -> bool { return x.size() < y.size(); };
   std::thread myThread(simpleBubbleSort, std::ref(vectStr), comp);
   std::vector<std::vector<std::string>> printed;
-  while(!isSorted) {
+  while (!isSorted) {
     std::unique_lock<std::mutex> unqLock(myMutex);
     condVar.wait(unqLock, [](){ return isStepped; });
     printed.push_back(vectStr);
@@ -142,9 +160,11 @@ TEST(Task2, test3) {
   isPrinted = true;
   isStepped = false;
   isSorted = false;
-  EXPECT_EQ({{"is", "summer", "coming"}, {"is", "summer", "coming"},
+  std::vector<std::vector<std::string>> expect =
+  {{"is", "summer", "coming"}, {"is", "summer", "coming"},
             {"is", "summer", "coming"}, {"is", "summer", "coming"},
-{"is", "summer", "coming"}, {"is", "summer", "coming"}}, printed);
+  {"is", "summer", "coming"}, {"is", "summer", "coming"}}
+  EXPECT_EQ(expect, printed);
 }
 
 TEST(Task2, test4) {
@@ -153,7 +173,7 @@ TEST(Task2, test4) {
   -> bool { return x[x.size() / 2] < y[y.size() / 2]; };
   std::thread myThread(simpleBubbleSort, std::ref(vectStr), comp);
   std::vector<std::vector<std::string>> printed;
-  while(!isSorted) {
+  while (!isSorted) {
     std::unique_lock<std::mutex> unqLock(myMutex);
     condVar.wait(unqLock, [](){ return isStepped; });
     printed.push_back(vectStr);
@@ -166,9 +186,11 @@ TEST(Task2, test4) {
   isPrinted = true;
   isStepped = false;
   isSorted = false;
-  EXPECT_EQ({{"summer", "is", "coming"}, {"summer", "coming", "is"},
+  std::vector<std::vector<std::string>> expect =
+  {{"summer", "is", "coming"}, {"summer", "coming", "is"},
             {"coming", "summer", "is"}, {"coming", "summer", "is"},
-{"coming", "summer", "is"}, {"coming", "summer", "is"}}, printed);
+  {"coming", "summer", "is"}, {"coming", "summer", "is"}}
+  EXPECT_EQ(expect, printed);
 }
 
 TEST(Task2, test5) {
@@ -177,7 +199,7 @@ TEST(Task2, test5) {
   -> bool { return x[0] + x.back() < y[0] + y.back(); };
   std::thread myThread(simpleBubbleSort, std::ref(vectStr), comp);
   std::vector<std::vector<std::string>> printed;
-  while(!isSorted) {
+  while (!isSorted) {
     std::unique_lock<std::mutex> unqLock(myMutex);
     condVar.wait(unqLock, [](){ return isStepped; });
     printed.push_back(vectStr);
@@ -190,21 +212,24 @@ TEST(Task2, test5) {
   isPrinted = true;
   isStepped = false;
   isSorted = false;
-  EXPECT_EQ({{"is", "summer", "coming"}, {"is", "coming", "summer"},
+  std::vector<std::vector<std::string>> expect =
+  {{"is", "summer", "coming"}, {"is", "coming", "summer"},
             {"coming", "is", "summer"}, {"coming", "is", "summer"},
-{"coming", "is", "summer"}, {"coming", "is", "summer"}}, printed);
+  {"coming", "is", "summer"}, {"coming", "is", "summer"}}
+  EXPECT_EQ(expect, printed);
 }
 
 TEST(Task3, test1) {
-  Buyer* buyer = new Buyer({10, 8, 15});
-  EXPECT_EQ({10, 8, 15}, buyer->check);
+  std::vector <int> check = {10, 8, 15};
+  Buyer* buyer = new Buyer(check);
+  EXPECT_EQ(check, buyer->check);
 }
 
 TEST(Task3, test2) {
   Buyer* buyer1 = new Buyer({10, 8, 14});
   Buyer* buyer2 = new Buyer({5, 12, 2});
   Buyer* buyer3 = new Buyer({4, 3, 6});
-  std::queue <Buyer*> *q = new std::queue<int>;
+  std::queue <Buyer*> *q = new std::queue<Buyer*>;
   q->push(buyer1);
   q->push(buyer2);
   q->push(buyer3);
@@ -218,7 +243,7 @@ TEST(Task3, test3) {
   Buyer* buyer2 = new Buyer({5, 6, 7, 8});
   Buyer* buyer3 = new Buyer({2, 4, 1, 3});
   Buyer* buyer4 = new Buyer({8});
-  std::queue <Buyer*> *q = new std::queue<int>;
+  std::queue <Buyer*> *q = new std::queue<Buyer*>;
   q->push(buyer1);
   q->push(buyer2);
   q->push(buyer3);
@@ -232,7 +257,7 @@ TEST(Task3, test4) {
   Buyer* buyer1 = new Buyer({7, 8, 9, 10});
   Buyer* buyer2 = new Buyer({5, 4});
   Buyer* buyer3 = new Buyer({2, 8, 13});
-  std::queue <Buyer*> *q = new std::queue<int>;
+  std::queue <Buyer*> *q = new std::queue<Buyer*>;
   q->push(buyer1);
   q->push(buyer2);
   q->push(buyer3);
@@ -244,7 +269,7 @@ TEST(Task3, test4) {
 TEST(Task3, test5) {
   Buyer* buyer1 = new Buyer({2, 3, 1, 4, 5});
   Buyer* buyer2 = new Buyer({2, 4});
-  std::queue <Buyer*> *q = new std::queue<int>;
+  std::queue <Buyer*> *q = new std::queue<Buyer*>;
   q->push(buyer1);
   q->push(buyer2);
   Supermarket* supermarket = new Supermarket(15, 40, 10, 5);

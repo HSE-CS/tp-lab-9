@@ -16,7 +16,7 @@ int main() {
   auto comp = [](const std::string &x, const std::string &y)
   -> bool { return x < y; };
   std::thread myThread(simpleBubbleSort, std::ref(vectStr), comp);
-  while(!isSorted) {
+  while (!isSorted) {
     std::unique_lock<std::mutex> unqLock(myMutex);
     condVar.wait(unqLock, [](){ return isStepped; });
     printVectStr(vectStr);
