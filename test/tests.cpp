@@ -14,7 +14,7 @@ extern bool isStepped;
 extern std::mutex myMutex;
 extern std::condition_variable condVar;
 
-TEST(Task1, test1) {
+TEST(lab9, Task1_test1) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) { return x < y; });
@@ -23,7 +23,7 @@ TEST(Task1, test1) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task1, test2) {
+TEST(lab9, Task1_test2) {
   std::vector<std::string> vectStr = {"Summer", "is", "coming",
   "my", "Dear", "Friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) { return x < y; });
@@ -32,7 +32,7 @@ TEST(Task1, test2) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task1, test3) {
+TEST(lab9, Task1_test3) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
@@ -42,7 +42,7 @@ TEST(Task1, test3) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task1, test4) {
+TEST(lab9, Task1_test4) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
@@ -52,7 +52,7 @@ TEST(Task1, test4) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task1, test5) {
+TEST(lab9, Task1_test5) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
@@ -62,7 +62,7 @@ TEST(Task1, test5) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task1, test6) {
+TEST(lab9, Task1_test6) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string x, std::string y) {
@@ -75,7 +75,7 @@ TEST(Task1, test6) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task1, test7) {
+TEST(lab9, Task1_test7) {
   std::vector<std::string> vectStr = {"summer", "is", "coming",
   "my", "dear", "friends"};
   bubbleSort(vectStr, [](std::string x, std::string y) {
@@ -89,7 +89,7 @@ TEST(Task1, test7) {
   EXPECT_EQ(expect, vectStr);
 }
 
-TEST(Task2, test1) {
+TEST(lab9, Task2_test1) {
   std::vector<std::string> vectStr = {"summer", "is", "coming"};
   auto comp = [](const std::string &x, const std::string &y)
   -> bool { return x < y; };
@@ -115,7 +115,7 @@ TEST(Task2, test1) {
   EXPECT_EQ(expect, printed);
 }
 
-TEST(Task2, test2) {
+TEST(lab9, Task2_test2) {
   std::vector<std::string> vectStr = {"summer", "is", "coming"};
   auto comp = [](const std::string &x, const std::string &y)
   -> bool { return x.back() < y.back(); };
@@ -141,7 +141,7 @@ TEST(Task2, test2) {
   EXPECT_EQ(expect, printed);
 }
 
-TEST(Task2, test3) {
+TEST(lab9, Task2_test3) {
   std::vector<std::string> vectStr = {"summer", "is", "coming"};
   auto comp = [](const std::string &x, const std::string &y)
   -> bool { return x.size() < y.size(); };
@@ -167,7 +167,7 @@ TEST(Task2, test3) {
   EXPECT_EQ(expect, printed);
 }
 
-TEST(Task2, test4) {
+TEST(lab9, Task2_test4) {
   std::vector<std::string> vectStr = {"summer", "is", "coming"};
   auto comp = [](const std::string &x, const std::string &y)
   -> bool { return x[x.size() / 2] < y[y.size() / 2]; };
@@ -193,7 +193,7 @@ TEST(Task2, test4) {
   EXPECT_EQ(expect, printed);
 }
 
-TEST(Task2, test5) {
+TEST(lab9, Task2_test5) {
   std::vector<std::string> vectStr = {"summer", "is", "coming"};
   auto comp = [](const std::string &x, const std::string &y)
   -> bool { return x[0] + x.back() < y[0] + y.back(); };
@@ -219,13 +219,13 @@ TEST(Task2, test5) {
   EXPECT_EQ(expect, printed);
 }
 
-TEST(Task3, test1) {
+TEST(lab9, Task3_test1) {
   std::vector <int> check = {10, 8, 15};
   Buyer* buyer = new Buyer(check);
   EXPECT_EQ(check, buyer->check);
 }
 
-TEST(Task3, test2) {
+TEST(lab9, Task3_test2) {
   Buyer* buyer1 = new Buyer({10, 8, 14});
   Buyer* buyer2 = new Buyer({5, 12, 2});
   Buyer* buyer3 = new Buyer({4, 3, 6});
@@ -238,7 +238,7 @@ TEST(Task3, test2) {
   EXPECT_EQ(0, q->size());
 }
 
-TEST(Task3, test3) {
+TEST(lab9, Task3_test3) {
   Buyer* buyer1 = new Buyer({9, 8});
   Buyer* buyer2 = new Buyer({5, 6, 7, 8});
   Buyer* buyer3 = new Buyer({2, 4, 1, 3});
@@ -253,7 +253,7 @@ TEST(Task3, test3) {
   EXPECT_EQ(0, q->size());
 }
 
-TEST(Task3, test4) {
+TEST(lab9, Task3_test4) {
   Buyer* buyer1 = new Buyer({7, 8, 9, 10});
   Buyer* buyer2 = new Buyer({5, 4});
   Buyer* buyer3 = new Buyer({2, 8, 13});
@@ -266,7 +266,7 @@ TEST(Task3, test4) {
   EXPECT_EQ(0, q->size());
 }
 
-TEST(Task3, test5) {
+TEST(lab9, Task3_test5) {
   Buyer* buyer1 = new Buyer({2, 3, 1, 4, 5});
   Buyer* buyer2 = new Buyer({2, 4});
   std::queue <Buyer*> *q = new std::queue<Buyer*>;
