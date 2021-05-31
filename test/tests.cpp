@@ -38,7 +38,7 @@ TEST(Task1, test3) {
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
              return x.back() < y.back(); });
   std::vector<std::string> expect =
-  {"coming", "dear", "summer", "friends", "is", "my"};
+  {"coming", "summer", "dear", "is", "friends", "my"};
   EXPECT_EQ(expect, vectStr);
 }
 
@@ -58,7 +58,7 @@ TEST(Task1, test5) {
   bubbleSort(vectStr, [](std::string &x, std::string &y) {
              return x.size() < y.size(); });
   std::vector<std::string> expect =
-  {"is", "my", "dear", "coming", "summer", "friends"};
+  {"is", "my", "dear", "summer", "coming", "friends"};
   EXPECT_EQ(expect, vectStr);
 }
 
