@@ -1,11 +1,14 @@
 // Copyright 2021 GHA Test Team
-#include "task1.h"
-#include "task2.h"
-#include "task3.h"
+#include <gtest/gtest.h>
+
 #include <algorithm>
 #include <cstdlib>
 #include <functional>
-#include <gtest/gtest.h>
+
+#include "task1.h"
+#include "task2.h"
+#include "task3.h"
+
 TEST(bubble_sort, int) {
   std::vector<int> v;
   std::srand(10);

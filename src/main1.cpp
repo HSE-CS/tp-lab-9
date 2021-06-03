@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include <task1.h>
+#include "task1.h"
 
 template <typename T>
 void sort_test(std::function<T(void)> gen_f,
@@ -36,7 +36,7 @@ int main() {
   sort_test(int_f, int_gt_comp);
 
   std::function<double(void)> double_f = []() {
-    return (double)(std::rand() % 100) / (std::rand() % 100);
+    return static_cast<double>(std::rand() % 100) / (std::rand() % 100);
   };
   std::function<bool(const double &, const double &)> double_comp =
       [](const double &a, const double &b) { return a > b; };

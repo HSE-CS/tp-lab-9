@@ -64,7 +64,7 @@ void start_model() {
         if (!q.active) {
           if (threads[i].joinable()) {
             threads[i].join();
-          };
+          }
           threads[i] = std::thread(process_customer_queue, std::ref(q));
           q.active = true;
         }
