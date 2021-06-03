@@ -9,8 +9,8 @@ void Bsort(std::vector<std::string>& objects,
 			if (comp(objects[i], objects[j])) {
 				std::lock_guard <std::mutex> lg(mu);
 				std::swap(objects[i], objects[j]);
+				cv.notify_all();
 			}
-			cv.notify_all();
 		}
 	}
 	{

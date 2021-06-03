@@ -12,16 +12,13 @@ int main() {
 	std::mutex mu;
 	std::condition_variable cv;
 	std::thread sort([&]() mutable { Bsort(Sobj, comp, done, mu, cv); });
-	std::thread print([&Sobj, &done, &mu, &cv]() mutable {
-		while (!done) {
-			std::unique_lock<std::mutex> ul(mu);
-			cv.wait(ul);
-			for_each(Sobj.begin(), Sobj.end(), [](auto el) {std::cout << el << ' '; });
-			std::cout << std::endl;
-			ul.unlock();
-		}
-		});
-	print.join();
+	while (!done) {
+		std::unique_lock<std::mutex> ul(mu);
+		cv.wait(ul);
+		for_each(Sobj.begin(), Sobj.end(), [](auto el) {std::cout << el << ' '; });
+		std::cout << std::endl;
+		ul.unlock();
+	}
 	sort.join();
 	return 0;
 }
