@@ -8,6 +8,7 @@
 #include <vector>
 #include <ctime>
 
-void stringBubbleSort(std::vector<std::string>& strVector, std::function<bool(std::string, std::string)> f);
+void stringBubbleSort(std::vector<std::string>& strVector,
+                      std::function<bool(std::string, std::string)> f);
 
 #endif  //  TASK1_H_
