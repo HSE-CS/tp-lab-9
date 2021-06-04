@@ -10,7 +10,7 @@
 #include <functional>
 
 
-void buble_sort(std::vector<std::string>&, std::function<bool(std::string, std::string)>);
+void bubble_sort(std::vector<std::string>&, std::function<bool(std::string, std::string)>);
 
 std::function<bool(std::string, std::string)> comp_1 = [](std::string a, std::string b) {return a > b; };
 
@@ -42,4 +42,17 @@ std::function<bool(std::string, std::string)> comp_5 = [](std::string a, std::st
     else return false;
 };
 
+template<class T>
+void BubbleSort_T(std::vector<std::string>& vect, T comp) {
+    int n = vect.size();
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - 1; j++) {
+            if (comp(vect[j + 1], vect[j])) {
+                std::swap(vect[j], vect[j + 1]);
+            }
+        }
+    }
+}
+
+void print_vct(std::vector<std::string>&);
 #endif  // INCLUDE_TASK1_H_
