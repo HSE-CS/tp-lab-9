@@ -13,4 +13,6 @@
 void stringBubbleSortWithMutex(std::vector<std::string>& vector,
                             std::function<bool(std::string, std::string)> f);
 
+void printVector(std::vector<std::string> vector);
+
 #endif  //  TASK2_H_

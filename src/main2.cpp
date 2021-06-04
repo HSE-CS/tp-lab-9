@@ -14,12 +14,6 @@ void fillVector(std::vector<std::string>* vector) {
     }
 }
 
-void printVector(std::vector<std::string> vector) {
-    for (auto obj: vector) {
-        std::cout << obj << std::endl;
-    }
-}
-
 int main() {
     srand(time(NULL));
     std::vector<std::string> strVector;

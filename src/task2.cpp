@@ -10,6 +10,12 @@ void insideSort(int iteration, std::vector<std::string>& vector,
     }
 }
 
+void printVector(std::vector<std::string> vector) {
+    for (auto obj: vector) {
+        std::cout << obj << std::endl;
+    }
+};
+
 void printVector(std::vector<std::string>& vector, int iteration) {
     std::cout << "Current iteration -> " << iteration << std::endl;
     for (auto obj: vector) {
@@ -28,3 +34,5 @@ void stringBubbleSortWithMutex(std::vector<std::string>& vector, std::function<b
         printVector(vector, i);
     }
 }
+
+
