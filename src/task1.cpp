@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 
-void buble_sort(std::vector<std::string>& vect, std::function<bool(std::string, std::string)> comp) {
+void bubble_sort(std::vector<std::string>& vect, std::function<bool(std::string, std::string)> comp) {
     int size = vect.size();
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - i - 1; j++) {
