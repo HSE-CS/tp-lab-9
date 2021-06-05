@@ -2,9 +2,9 @@
 
 #include "task3.h"
 #include <ctime>
-/*int main() {
+int main() {
 	srand(time(nullptr));
 	Supermarket* supermarket = new Supermarket();
 	supermarket->SupermarketRun();
 	return 0;
-}*/
+}
