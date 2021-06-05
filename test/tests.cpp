@@ -39,4 +39,3 @@ TEST(task1, t_4) {
     { "book", "hello", "language" };
     EXPECT_EQ(expect, vec);
 }
-}
