@@ -4,8 +4,12 @@
 #include<vector>
 #include<functional>
 #include<iostream>
-#include<mutex>
+#include<condition_variable>
 #include<algorithm>
+#include<iostream>
+#include<thread>
+#include<mutex>
+#include<string>
 
 void Bsort(std::vector<std::string>& objects,
 	const std::function<bool(std::string, std::string)> comp,

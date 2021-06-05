@@ -7,8 +7,10 @@ void Bsort(std::vector<std::string>& objects,
 	for (size_t i{ 0 }; i < objects.size(); ++i) {
 		for (size_t j{ 0 }; j < objects.size(); ++j) {
 			if (comp(objects[i], objects[j])) {
-				std::lock_guard <std::mutex> lg(mu);
-				std::swap(objects[i], objects[j]);
+				{
+					std::lock_guard <std::mutex> lg(mu);
+					std::swap(objects[i], objects[j]);
+				}
 				cv.notify_all();
 			}
 		}
