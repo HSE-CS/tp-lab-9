@@ -3,13 +3,13 @@
 #include "task2.h"
 #include <iostream>
 
-int main() {
-    std::mutex mtx;
-    cv con_var;
-    bool step = false;
-    bool printed = true;
-    bool sorted = false;
+std::mutex mtx;
+cv con_var;
+bool step = false;
+bool printed = true;
+bool sorted = false;
 
+int main() {
     std::vector<std::string> mass_original;
     mass_original.push_back(std::string("Aboba"));
     mass_original.push_back(std::string("SeRg"));
@@ -19,8 +19,7 @@ int main() {
     mass_original.push_back(std::string("12"));
     mass_original.push_back(std::string("tb-lab-9"));
 
-    std::thread t_1(bubble_sort_th, std::ref(mass_original), comp_1,
-        printed, sorted, step, mtx, con_var);
+    std::thread t_1(bubble_sort_th, std::ref(mass_original), comp_1);
 
     while (!sorted) {
         std::unique_lock<std::mutex> unqLock(mtx);
