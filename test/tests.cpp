@@ -8,7 +8,7 @@ TEST(lab9, test1) {
   Bsort(Sobj, [](std::string a, std::string b) {return a < b; });
   std::vector<std::string> expect =
   { "!;; '", "Bcd&1%^qA", "UPAA", "o", "uAAaa   a", "ub/+" };
-  EXPECT_EQ(expect, vectStr);
+  EXPECT_EQ(expect, Sobj);
 }
 
 TEST(lab9, test2) {
@@ -16,7 +16,7 @@ TEST(lab9, test2) {
   Bsort(Sobj, [](std::string a, std::string b) {return a.size() < b.size(); });
   std::vector<std::string> expect =
   { "o", "UPAA !;; '", "ub/+", "uAAaa   a", "Bcd&1%^qA" };
-  EXPECT_EQ(expect, vectStr);
+  EXPECT_EQ(expect, Sobj);
 }
 
 TEST(lab9, test3) {
@@ -29,7 +29,7 @@ TEST(lab9, test3) {
     });
   std::vector<std::string> expect =
   { "o", "!;; '", "ub/+", "uAAaa   a", "Bcd&1%^qA", "UPAA" };
-  EXPECT_EQ(expect, vectStr);
+  EXPECT_EQ(expect, Sobj);
 }
 
 TEST(lab9, test4) {
@@ -42,7 +42,7 @@ TEST(lab9, test4) {
     });
   std::vector<std::string> expect =
   { "!;; '", "UPAA", "o", "ub/+", "Bcd&1%^qA", "uAAaa   a" };
-  EXPECT_EQ(expect, vectStr);
+  EXPECT_EQ(expect, Sobj);
 }
 
 TEST(lab9, test5) {
@@ -54,5 +54,5 @@ TEST(lab9, test5) {
     });
   std::vector<std::string> expect =
   { "UPAA", "o", "ub/+", "uAAaa   a", "Bcd&1%^qA", "!;;'"};
-  EXPECT_EQ(expect, vectStr);
+  EXPECT_EQ(expect, Sobj);
 }
