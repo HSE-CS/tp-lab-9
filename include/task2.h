@@ -1,13 +1,15 @@
 // Copyright 2021 LongaBonga
 #ifndef INCLUDE_TASK2_H_
 #define INCLUDE_TASK2_H_
-#include <string>
-#include <vector>
-#include <iostream>
 #include <functional>
+#include <iostream>
 #include <mutex>
+#include <string>
 #include <thread>
+#include <vector>
 
-std::vector<std::string> bubbleSortParallel(std::vector<std::string>& vec, std::function<bool(std::string, std::string)> comparator);
+std::vector<std::string> bubbleSortParallel(
+    std::vector<std::string>& vec,
+    std::function<bool(std::string, std::string)> comparator);
 
 #endif  //  INCLUDE_TASK2_H_
