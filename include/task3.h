@@ -18,9 +18,9 @@ class Shop {
   std::mutex mu;
   std::set<std::pair<std::thread*, std::queue<buyer*>*>> cashBoxes;
   std::set<buyer*> buyers;
-public:
+ public:
   void work();
   friend void cbwork(std::queue<buyer*>*);
 };
 void cbwork(std::queue<buyer*>*);
-#endif //  INCLUDE_TASK3_H_
+#endif  // INCLUDE_TASK3_H_

@@ -1,6 +1,6 @@
-//Copyright NikDemoShow 2021
+// Copyright NikDemoShow 2021
 #include"task3.h"
-void Shop::work(){
+void Shop::work() {
   for (unsigned int i{ 0 }; i < this->buyerscnt; ++i) {
     buyer* newB{ new buyer };
     for (int j{ 0 }; j < std::rand() % 5 + 5; ++j) {
