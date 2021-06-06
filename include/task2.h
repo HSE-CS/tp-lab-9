@@ -6,6 +6,8 @@
 #include<iostream>
 #include<algorithm>
 #include<mutex>
+#include <string>
+#include <utility>
 
 std::mutex m;
 
@@ -19,8 +21,8 @@ void printArr(std::vector<std::string> arr) {
 
 
 
-void Sort2(std::vector<std::string> arr, std::function<bool(std::string, std::string)> comp) {
-
+void Sort2(std::vector<std::string> arr, 
+    std::function<bool(std::string, std::string)> comp) {
     int length = arr.size();
     for (int i = 0; i < length - 1; i++) {
         for (int j = i + 1; j < length; j++) {

@@ -3,7 +3,8 @@
 
 void Shop::run(Customer* cust) {
     for (int i = 0; i < cust->getGoodsSize(); i++) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(cust->getGood(i)));
+        std::this_thread::sleep_for(
+            std::chrono::milliseconds(cust->getGood(i)));
     }
 }
 
@@ -20,8 +21,7 @@ void Shop::run() {
         for (auto i = queue.begin(); i != queue.end(); i++) {
             if ((*i) == nullptr) {
                 queue.erase(i);
-            }
-            else if ((*i)->size() < 5) {
+            } else if ((*i)->size() < 5) {
                 (*i)->push(new Customer(createGoods()));
                 isCreateQueu = false;
                 break;

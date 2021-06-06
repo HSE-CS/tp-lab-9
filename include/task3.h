@@ -5,11 +5,10 @@
 #include <thread>
 #include <queue>
 #include <mutex>
-#include <thread>
 class Customer {
-private: 
+ private:
     std::vector<int> goods;
-public:
+ public:
     explicit Customer(std::vector<int> goods) {
         this->goods = goods;
     }
@@ -23,7 +22,7 @@ private:
     std::vector<std::queue<Customer*>*> queue;
     const int num = 50;
 public:
-    Shop() {};
+    Shop() {}
     void run(Customer* cust);
     void runService(std::queue <Customer*>* q);
     void run();

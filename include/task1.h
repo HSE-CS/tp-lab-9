@@ -5,8 +5,11 @@
 #include<functional>
 #include<iostream>
 #include<algorithm>
+#include<utility>
+#include <string>
 
-void Sort(std::vector<std::string>& arr, std::function<bool(std::string, std::string)> comp) {
+void Sort(const std::vector<std::string>& arr, 
+    std::function<bool(std::string, std::string)> comp) {
     int length = arr.size();
     for (int i = 0; i < length - 1; i++) {
         for (int j = i + 1; j < length; j++) {
@@ -23,6 +26,4 @@ void printArr1(std::vector<std::string> arr) {
     }
     std::cout << '\n';
 }
-
-
 #endif  // INCLUDE_TASK1_H_
