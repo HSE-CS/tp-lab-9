@@ -55,7 +55,7 @@ void Shop::work_with_client(Client* client) {
         std::this_thread::sleep_for(std::chrono::milliseconds(time));
         std::unique_lock<std::mutex> t_lock(mtx);
         std::cout << "Cash register  " << std::this_thread::get_id()
-            << " serves the customer " << 
+            << " serves the customer " <<
             client->get_client_id() << ", who bought " << i + 1
             << " by price: " << client->get_purchas(i) << '\n';
         t_lock.unlock();

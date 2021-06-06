@@ -23,7 +23,7 @@ class Client {
     std::vector<int> purchases;
  public:
     explicit Client(std::vector<int> purchases_) : purchases(purchases_),
-        client_id(++num_client) {};
+        client_id(++num_client) {}
     int purchases_size() { return this->purchases.size(); }
     int get_purchas(int id) { if (id >= 0 && id <= purchases_size())
     { return purchases[id]; } throw; return 0; }

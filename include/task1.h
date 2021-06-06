@@ -39,7 +39,7 @@ std::function<bool(std::string, std::string)> comp_3 = [](std::string a,
         count_b++;
     if (count_a < count_b) {
         return true;
-    } else { 
+    } else {
         return false;
     }
 };
@@ -48,8 +48,7 @@ std::function<bool(std::string, std::string)> comp_4 = [](std::string a,
     std::string b) {
     if (a.back() > b.back()) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 };
@@ -58,8 +57,7 @@ std::function<bool(std::string, std::string)> comp_5 = [](std::string a,
     std::string b) {
     if (a.size() > b.size()) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 };
