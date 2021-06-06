@@ -9,20 +9,20 @@
 #include <vector>
 #include <queue>
 #include <mutex>
+#include <ctime>
 #include <typeinfo>
 
 //  Constants
 const int Max_queue_len = 5;
 const int Customer_delay_ms = 1000;
 const int Product_processing_delay = 500;
-const int Max_quantity_of_customers = 30;
+const int Max_quantity_of_customers = 15;
+const int Max_products_quantity = 50;
 
 //  Classes
 class Customer {
- private:
-    std::vector<long> purchaseVector;
-
  public:
+    std::vector<long> purchaseVector;
     Customer();
     ~Customer();
 };
@@ -33,11 +33,10 @@ class Shop {
     std::vector<std::queue<Customer*>*> customerQueue;
 
  public:
-    Shop();
-    ~Shop();
     Customer* customerCreation();
-    void processCustomer();
-
+    void processCustomer(Customer* objCustomer);
+    void processQueue(std::queue<Customer*> currentQueue);
+    void processShop();
 };
 
 #endif  //  INCLUDE_TASK3_H_
