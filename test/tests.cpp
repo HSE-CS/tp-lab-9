@@ -5,6 +5,9 @@
 #include "task1.h"
 #include "task2.h"
 #include "task3.h"
+#include "main1.cpp"
+#include "main2.cpp"
+#include "main3.cpp"
 #include <iostream>
 #include <vector>
 #include <string>
