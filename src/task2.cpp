@@ -2,10 +2,8 @@
 
 #include "task2.h"
 
-#include "task1.h"
-
 void bubbleSortParallel(
-    std::vector<std::string>& vec,
+    const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator) {
   std::vector<std::string> ans(vec);
   std::mutex a;
@@ -24,4 +22,12 @@ void bubbleSortParallel(
     stream.join();
     print(ans);
   }
+}
+
+void print(const std::vector<std::string>& vec) {
+  for (auto value : vec) {
+    std::cout << "\"" << value << "\""
+              << ", ";
+  }
+  std::cout << '\n';
 }

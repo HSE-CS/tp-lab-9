@@ -7,7 +7,7 @@
 #include <vector>
 
 std::vector<std::string> bubbleSort(
-    std::vector<std::string>& vec,
+    const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator);
 
 void print(std::vector<std::string>& vec);

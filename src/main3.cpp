@@ -5,14 +5,14 @@
 
 #include "task3.h"
 int main() {
-  int customers{static_cast<int>(rand() % 100 + 100)};
+  int customers{static_cast<int>(std::rand() % 100 + 100)};
   int active = 0;
   auto* line_customers = new std::deque<std::vector<int>*>{};
 
   while (customers) {
-    auto* perches = new std::vector<int>(static_cast<int>(rand() % 10 + 1), 0);
+    auto* perches = new std::vector<int>(static_cast<int>(std::rand() % 10 + 1), 0);
     for (int i{0}; i < perches->size(); i++) {
-      perches->at(i) = rand() % 10;
+      perches->at(i) = std::rand() % 10;
     }
     line_customers->push_back(perches);
     if (line_customers->size() == 5) {
@@ -20,7 +20,7 @@ int main() {
       th.detach();
       line_customers = new std::deque<std::vector<int>*>{};
     }
-    usleep(rand() % 55000);
+    usleep(std::rand() % 55000);
     customers--;
   }
 }

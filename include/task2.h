@@ -9,7 +9,9 @@
 #include <vector>
 
 void bubbleSortParallel(
-    std::vector<std::string>& vec,
+    const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator);
+
+void print(const std::vector<std::string>& vec);
 
 #endif  //  INCLUDE_TASK2_H_
