@@ -45,7 +45,7 @@ void Shop::processShop() {
         std::this_thread::sleep_for
                     (std::chrono::milliseconds(Customer_delay_ms));
         bool notFullQueueExist = false;
-        for (auto it = this->customerQueue.begin(); 
+        for (auto it = this->customerQueue.begin();
                     it != this->customerQueue.end(); ++it) {
             if ((*it)->size() < Max_queue_len) {
                 notFullQueueExist = true;
@@ -59,8 +59,7 @@ void Shop::processShop() {
             objQueue->push(customerCreation());
             this->customerQueue.push_back(objQueue);
             std::thread* thread = new std::thread(
-                    [this, &objQueue](){Shop::processQueue(*objQueue);}
-                );
+                   [this, &objQueue](){Shop::processQueue(*objQueue);});
             this->opennedThreads.push_back(thread);
         }
     }
