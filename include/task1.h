@@ -8,5 +8,5 @@
 #include<algorithm>
 
 void Bsort(std::vector<std::string>* objects,
-	const std::function<bool(std::string, std::string)> comp);
+  const std::function<bool(std::string, std::string)> comp);
 #endif  //  INCLUDE_TASK1_H_
