@@ -9,6 +9,7 @@
 #include <string>
 #include <mutex>
 #include <thread>
+#include <algorithm>
 
 void sort(std::vector<std::string> arr,
     std::function<bool(std::string, std::string)> comp, int i);
@@ -18,4 +19,4 @@ void BigBubbleSort(const std::vector<std::string>& array,
 
 void print(std::vector<std::string> arr);
 
-#endif  //  INCLUDE_TASK1_H_
+#endif  // INCLUDE_TASK2_H_
