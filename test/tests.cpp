@@ -1,8 +1,8 @@
 // Copyright 2021 GHA Test Team
 #include <gtest/gtest.h>
-#include "task_1.h"
-#include "task_2.h"
-#include "task_3.h"
+#include "task1.h"
+#include "task2.h"
+#include "task3.h"
 
 
 TEST(task1, t_1) {
