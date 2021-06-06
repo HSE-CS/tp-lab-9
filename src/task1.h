@@ -1,14 +1,15 @@
 // Copyright 2021 alexgiving
 
-#ifndef INCLUDE_TASK1_H_
-#define INCLUDE_TASK1_H_
+#ifndef INCLUDE_TASK_1_H_
+#define INCLUDE_TASK_1_H_
 
 #include <vector>
 #include <string>
 #include <iostream>
+#include <utility>  // For swap
 
-void print(std::vector<std::string>& arr);
-void print(std::vector<std::string>& arr, const std::string& separator);
+void print(std::vector<std::string> const & arr);
+void print(std::vector<std::string> const & arr, const std::string& separator);
 
 template<class T>
 void bubbleSort(std::vector<std::string> & arr, T comp) {
@@ -18,4 +19,4 @@ void bubbleSort(std::vector<std::string> & arr, T comp) {
         std::swap(arr[j], arr[j + 1]);
 }
 
-#endif //  INCLUDE_TASK1_H_
+#endif  // INCLUDE_TASK_1_H_
