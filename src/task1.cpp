@@ -9,7 +9,7 @@ void print(std::vector<std::string> & vec) {
 }
 
 
-std::vector<std::string> bubbleSort(const std::vector<std::string>& vec, std::function<bool(std::string, std::string)> comparator) {
+std::vector<std::string> bubbleSort(std::vector<std::string>& vec, std::function<bool(std::string, std::string)> comparator) {
   std::vector<std::string> ans(vec);
   for (auto i = 0; i < vec.size(); i++)
     for (auto j = 0; j < vec.size() - 1; j++)
