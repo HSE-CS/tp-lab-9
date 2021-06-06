@@ -12,7 +12,8 @@
 #include <string>
 
 
-template <typename A, typename Te = typename std::iterator_traits<A>::value_type>
+template <typename A,
+    typename Te = typename std::iterator_traits<A>::value_type>
 void BubbleSort(A start_,
     A finish_, std::function<bool(const Te &, const Te &)> comp_) {
   for (int i = finish_ - start_ - 1; i > 0; i--) {
