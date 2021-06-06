@@ -17,6 +17,7 @@ void fillVector(std::vector<std::string>* vector) {
 int main() {
     srand(time(NULL));
     std::vector<std::string> strVector;
+//  Fulfilling and copying vector    
     fillVector(&strVector);
     std::vector<std::string> strVector1(strVector),
                             strVector2(strVector),
@@ -24,7 +25,7 @@ int main() {
                             strVector4(strVector),
                             strVector5(strVector);
 
-    std::cout << std::endl;
+//  Comparators
     auto comp1 = [](std::string str1, std::string str2)->bool{ 
         return (str1.length() > str2.length() ? true : false);
     };
@@ -40,7 +41,9 @@ int main() {
     auto comp5 = [](std::string str1, std::string str2)->bool{
         return (str1 < str2 ?  true : false);
     };
-    std::cout << std::endl << std::endl;
+
+//  Sorting
+
     stringBubbleSortWithMutex(strVector1, comp1);
     stringBubbleSortWithMutex(strVector2, comp2);
     stringBubbleSortWithMutex(strVector3, comp3);

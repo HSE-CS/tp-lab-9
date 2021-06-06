@@ -11,4 +11,6 @@
 void stringBubbleSort(std::vector<std::string>& strVector,
                       std::function<bool(std::string, std::string)> f);
 
+void printVector(std::vector<std::string> vector);
+
 #endif  //  TASK1_H_

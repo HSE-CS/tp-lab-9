@@ -14,15 +14,10 @@ void fillVector(std::vector<std::string>* vector) {
     }
 }
 
-void printVector(std::vector<std::string> vector) {
-    for (auto obj: vector) {
-        std::cout << obj << std::endl;
-    }
-}
-
 int main() {
     srand(time(NULL));
     std::vector<std::string> strVector;
+//  Fulfilling and copying
     fillVector(&strVector);
     std::vector<std::string> strVector1(strVector),
                             strVector2(strVector),
@@ -30,7 +25,7 @@ int main() {
                             strVector4(strVector),
                             strVector5(strVector);
 
-    std::cout << std::endl;
+//  Comparators
     auto comp1 = [](std::string str1, std::string str2)->bool{ 
         return (str1.length() > str2.length() ? true : false);
     };
@@ -46,7 +41,7 @@ int main() {
     auto comp5 = [](std::string str1, std::string str2)->bool{
         return (str1 < str2 ?  true : false);
     };
-    std::cout << std::endl << std::endl;
+    
     stringBubbleSort(strVector1, comp1);
     stringBubbleSort(strVector2, comp2);
     stringBubbleSort(strVector3, comp3);
