@@ -3,7 +3,7 @@
 #include "task2.h"
 #include <thread>
 
-void BubbleSort(std::vector<std::string>& _strarr,
+void bubbleSortt2(std::vector<std::string>& _strarr,
 	bool _cmpr(const std::string _str1, const std::string _str2)) {
 	std::vector<std::string> v_string(_strarr);
 	std::mutex a;
@@ -21,6 +21,7 @@ void BubbleSort(std::vector<std::string>& _strarr,
 			}
 			});
 		thread.join();
+
 		for (auto x : v_string) {
 			std::cout << x << ' ';
 		}

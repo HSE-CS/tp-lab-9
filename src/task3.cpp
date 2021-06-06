@@ -18,14 +18,14 @@ void Shop::CustomerPrint(int _id, int i) {
 void Shop::QueueRun(std::queue <Customer*>* _customers) {
 	int id = 1;
 	while (!_customers->empty()) {
-		auto Customer = _customers->front();
-		CustomerRun(Customer, id);
+		auto customer = _customers->front();
+		CustomerRun(customer, id);
 		id++;
 	}
 	delete _customers;
 }
 Customer* Shop::newCustomer() {
-	int number_of_deals = std::rand() % 30 + 1;
+	int number_of_deals = std::rand() % 10 + 1;
 	std::vector<int> list_;
 	for (int i = 0; i < number_of_deals; i++) {
 		list_.push_back(std::rand() % 300 + 1);
@@ -36,15 +36,15 @@ void Shop::ShopRun() {
 	int random = std::rand() % 1500;
 	for (int i = 0; i < limit; i++) {
 		bool IT = false;
-		for (auto Customer = customers.begin(); Customer != customers.end(); Customer++) {
+		for (auto customer = customers.begin(); customer != customers.end(); customer++) {
 			std::this_thread::sleep_for(std::chrono::milliseconds(random));
-			if ((*Customer)->size() < 10 && (*Customer) != nullptr) {
-				(*Customer)->push(newCustomer());
+			if ((*customer)->size() < 10 && (*customer) != nullptr) {
+				(*customer)->push(newCustomer());
 				IT = true;
 				break;
 			}
-			else if ((*Customer) == nullptr) {
-				customers.erase(Customer);
+			else if ((*customer) == nullptr) {
+				customers.erase(customer);
 			}
 		}
 		if (IT == false) {

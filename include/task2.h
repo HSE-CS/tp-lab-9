@@ -7,6 +7,6 @@
 #include <vector>
 #include <mutex>
 
-void BubbleSort(std::vector<std::string>& _strarr,
+void bubbleSortt2(std::vector<std::string>& _strarr,
 	bool _cmpr(const std::string _str1, const std::string _str2));
 #endif  //  INCLUDE_TASK2_H_
