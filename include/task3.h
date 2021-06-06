@@ -11,7 +11,7 @@ class Customer {
   size_t shop_list;
 
  public:
-  Customer(size_t shop_list_ = 0) : shop_list(shop_list_) {}
+  explicit Customer(size_t shop_list_ = 0) : shop_list(shop_list_) {}
   size_t get_shop_list() { return shop_list; }
 };
 

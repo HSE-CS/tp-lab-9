@@ -8,7 +8,6 @@ void task2(std::vector<std::string>& toSort,
   isWork = true;
   for (size_t i = 0; i < toSort.size() - 1; ++i) {
     mtx.lock();
-   // std::cout << "sorting\n";
     for (size_t j = i + 1; j < toSort.size(); ++j) {
       if (comp(toSort[i], toSort[j])) {
         swap(toSort[i], toSort[j]);

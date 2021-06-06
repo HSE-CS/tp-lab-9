@@ -91,7 +91,7 @@ TEST(task_1, test_5) {
     return false;
   });
 
-  std::vector<std::string> expect = {"WORLD", "TP laaab 9", "Hello   ",
-                                     "long string with a lot of spaces"};
+  std::vector<std::string> expect = {
+      "TP laaab 9", "long string with a lot of spaces", "WORLD", "Hello   "};
   EXPECT_EQ(expect, v);
 }
