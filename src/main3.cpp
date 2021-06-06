@@ -2,4 +2,8 @@
 
 #include "../include/task3.h"
 
-int main() { return 0; }
+int main() {
+  Supermarket supermarket;
+  supermarket.run();
+  return 0;
+}
