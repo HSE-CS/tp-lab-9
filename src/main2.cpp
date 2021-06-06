@@ -22,8 +22,9 @@ int main() {
   v.push_back("a");
 
   std::mutex mtx;
-  bool work = 1;
-  std::thread thr1(task2, std::ref(v), std::ref(f1), std::ref(work), std::ref(mtx));
+  bool work = true;
+  std::thread thr1(task2, std::ref(v), std::ref(f1), std::ref(work),
+                   std::ref(mtx));
   std::thread thr2(print_vector, std::ref(v), std::ref(work), std::ref(mtx));
   thr1.join();
   thr2.join();

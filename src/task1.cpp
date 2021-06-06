@@ -9,7 +9,7 @@ void swap(T &a, T &b) {
 }
 
 void bubble_sort(std::vector<std::string> &toSort,
-                 std::function<bool(std::string, std::string)> &comp) {
+                 std::function<bool(std::string, std::string)> comp) {
   for (size_t i = 0; i < toSort.size() - 1; ++i) {
     for (size_t j = i + 1; j < toSort.size(); ++j) {
       if (comp(toSort[i], toSort[j])) {
@@ -20,8 +20,9 @@ void bubble_sort(std::vector<std::string> &toSort,
 }
 
 void print_vector(std::vector<std::string> &toPrint) {
+  std::cout << "{ ";
   for (auto i : toPrint) {
-    std::cout << '"' << i << "\"; ";
+    std::cout << '"' << i << "\", ";
   }
-  std::cout << "\n";
+  std::cout << "}\n";
 }

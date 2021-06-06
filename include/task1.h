@@ -8,7 +8,7 @@
 #include<iostream>
 
 void bubble_sort(std::vector<std::string> &toSort,
-                 std::function<bool(std::string, std::string)> &comp);
+                 std::function<bool(std::string, std::string)> comp);
 
 void print_vector(std::vector<std::string> &toPrint);
 

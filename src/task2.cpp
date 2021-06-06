@@ -20,9 +20,9 @@ void task2(std::vector<std::string>& toSort,
   isWork = false;
 }
 
-void print_vector(std::vector<std::string>& toPrint, bool &isWork, std::mutex& mtx) {
+void print_vector(std::vector<std::string>& toPrint, bool& isWork,
+                  std::mutex& mtx) {
   while (isWork) {
-   // std::cout << "\nPrinting\n";
     mtx.lock();
     for (auto i : toPrint) {
       std::cout << "\"" << i << "\""

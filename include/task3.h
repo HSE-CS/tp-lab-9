@@ -26,7 +26,7 @@ class Shop {
   std::vector<std::queue<Customer*>*> queues;
   std::vector<std::thread*> thread_list;
  public:
-  Shop(size_t max_customers_ = 50, size_t max_product_list_ = 20,
+  explicit Shop(size_t max_customers_ = 50, size_t max_product_list_ = 20,
        size_t time_to_buy_product_ = 100, size_t max_queue_len_ = 5,
        size_t max_customer_delay_ = 2000)
       : max_customers(max_customers_),
@@ -39,4 +39,4 @@ class Shop {
   void surve_queue(std::queue<Customer*>* to_serve, size_t count);
 };
 
-#endif  // !INCLUDE_TASK3_H_
+#endif  // INCLUDE_TASK3_H_

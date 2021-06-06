@@ -9,7 +9,7 @@
 
 
 std::function<bool(std::string, std::string)> f1 =
-    [](std::string s1, std::string s2) { return s1.size() > s2.size(); };  // сортировка по размеру
+    [](std::string s1, std::string s2) { return s1.size() > s2.size(); };
 
 std::function<bool(std::string, std::string)> f2 = [](std::string s1,
                                                      std::string s2) {
@@ -21,9 +21,10 @@ std::function<bool(std::string, std::string)> f2 = [](std::string s1,
     if (i == ' ') --count;
   }
   return count > 0;
-};  // количеству пробелов
+};
 
-std::function<bool(std::string, std::string)> f3 = [](std::string s1, std::string s2) {
+std::function<bool(std::string, std::string)> f3 = [](std::string s1,
+                                                      std::string s2) {
   int count = 0;
   for (auto i : s1) {
     if (i == 'a' || i == 'e' || i == 'y' || i == 'u' || i == 'i' || i == 'o' ||
@@ -36,22 +37,23 @@ std::function<bool(std::string, std::string)> f3 = [](std::string s1, std::strin
       --count;
   }
   return count > 0;
-};  // количеству глассных
+};
 
-std::function<bool(std::string, std::string)> f4 = [](std::string s1, std::string s2) {
+std::function<bool(std::string, std::string)> f4 = [](std::string s1,
+                                                      std::string s2) {
   int count = 0;
   for (auto i : s1) {
-    if (i >= 'A' && i <='Z')
-      ++count;
+    if (i >= 'A' && i <= 'Z') ++count;
   }
   for (auto i : s2) {
     if (i >= 'A' && i <= 'Z') --count;
   }
   return count > 0;
-};  // количеству больших букв
+};
 
-std::function<bool(std::string, std::string)> f5 = [](std::string s1, std::string s2) {
-  size_t size = (s1.size() > s2.size()? s1.size() : s2.size());
+std::function<bool(std::string, std::string)> f5 = [](std::string s1,
+                                                      std::string s2) {
+  size_t size = (s1.size() > s2.size() ? s1.size() : s2.size());
   for (size_t i = 0; i < size; ++i) {
     if (i == s1.size()) return false;
     if (i == s2.size()) return true;
@@ -62,13 +64,11 @@ std::function<bool(std::string, std::string)> f5 = [](std::string s1, std::strin
 
 
 int main() {
-  std::vector<std::string> v;
-  v.push_back("Hello   ");
-  v.push_back("WORLD");
-  v.push_back("long string with a lot of spaces");
-  v.push_back("TP laaab 9");
+  std::vector<std::string> v = {
+      "Hello   ", "WORLD", "long string with a lot of spaces", "TP laaab 9"};
 
-  bubble_sort(v, f1);
+  bubble_sort(
+      v, [](std::string s1, std::string s2) { return s1.size() > s2.size(); });
   print_vector(v);
 
   bubble_sort(v, f2);

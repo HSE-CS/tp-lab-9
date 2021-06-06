@@ -21,7 +21,8 @@ void Shop::shopping() {
       std::queue<Customer *> *new_queue = new std::queue<Customer *>;
       new_queue->push(new Customer(std::rand() % max_product_list));
       queues.push_back(new_queue);
-      thread_list.push_back(new std::thread(&Shop::surve_queue, this, new_queue, queues.size()));
+      thread_list.push_back(
+          new std::thread(&Shop::surve_queue, this, new_queue, queues.size()));
     }
   }
   while (surved_customers < max_customers) {
