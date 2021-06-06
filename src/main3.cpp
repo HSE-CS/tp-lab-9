@@ -10,7 +10,8 @@ int main() {
   auto* line_customers = new std::deque<std::vector<int>*>{};
 
   while (customers) {
-    auto* perches = new std::vector<int>(static_cast<int>(std::rand() % 10 + 1), 0);
+    auto* perches =
+        new std::vector<int>(static_cast<int>(std::rand() % 10 + 1), 0);
     for (int i{0}; i < perches->size(); i++) {
       perches->at(i) = std::rand() % 10;
     }
