@@ -2,7 +2,7 @@
 
 #include "task1.h"
 
-std::vector<std::string> bubbleSort(std::vector<std::string> &vec,
+std::vector<std::string> bubbleSort(const std::vector<std::string> &vec,
     std::function<bool(std::string, std::string)> comparator) {
     sort(vec.begin(), vec.end(), comparator);
     return vec;

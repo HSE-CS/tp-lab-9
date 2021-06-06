@@ -11,7 +11,8 @@ void service(std::deque<std::vector<int>*>* line_customers, int active) {
             s << i << " ";
         }
         usleep((std::rand() % 54000) * line_customers->front()->size());
-        std::cout << "Line [ " << active << " ] served customer " << s.str() << "}"
+        std::cout << "Line [ " << active 
+            << " ] served customer " << s.str() << "}"
             << '\n';
         line_customers->pop_front();
     }

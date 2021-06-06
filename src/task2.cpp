@@ -2,7 +2,8 @@
 
 #include "task2.h"
 
-std::vector<std::string> bubbleSortTwoThread( const std::vector<std::string>& vec,
+std::vector<std::string> bubbleSortTwoThread(
+    const std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator) {
     std::vector<std::string> res(vec);
     std::mutex a;

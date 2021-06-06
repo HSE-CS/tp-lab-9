@@ -13,7 +13,6 @@ int main()
         return a < b;
     };
 
-    print(bubbleSortTwoThread(source_vector, comparator));
-    std::cout << "Last line is the final result" << std::endl;
+    std::vector<std::string> res = bubbleSortTwoThread(source_vector, comparator);
     return 0;
 }

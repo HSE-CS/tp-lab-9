@@ -3,8 +3,7 @@
 #include <iostream>
 #include "task1.h"
 
-int main()
-{
+int main() {
     std::vector<std::string> source_vector{ "You", "Have", "the",
         "right", "to", "remain", "silent" };
 
@@ -38,5 +37,5 @@ int main()
     print(bubbleSort(source_vector, comparator3));
     print(bubbleSort(source_vector, comparator4));
     print(bubbleSort(source_vector, comparator5));
-    return 0; 
+    return 0;
 }
