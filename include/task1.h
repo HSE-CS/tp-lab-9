@@ -90,6 +90,6 @@ void BubbleSort_T(std::vector<std::string>& vect, T comp) {
 }
 
 
-void print_vct(const std::vector<std::string>&);
+void print_vct(std::vector<std::string>);
 
 #endif  // INCLUDE_TASK1_H_

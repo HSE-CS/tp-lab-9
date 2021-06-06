@@ -22,6 +22,6 @@ void bubble_sort_th(std::vector<std::string>&,
 std::function<bool(const std::string&, const std::string&)> comp_1 = [](const std::string& a,
     const std::string& b) { return a > b; };
 
-void print_vct(const std::vector<std::string>&);
+void print_vct(std::vector<std::string>);
 
 #endif  // INCLUDE_TASK2_H_

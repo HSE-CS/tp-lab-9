@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-void print_vct(const std::vector<const std::string>& vect) {
+void print_vct(std::vector<const std::string> vect) {
     for (auto word : vect) {
         std::cout << word << ' ';
     }

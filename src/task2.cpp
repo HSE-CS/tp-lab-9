@@ -26,7 +26,7 @@ void bubble_sort_th(std::vector<std::string>& vect,
     sorted = true;
 }
 
-void print_vct(const std::vector<std::string>& vct) {
+void print_vct(std::vector<std::string> vct) {
     for (auto x : vct) {
         std::cout << x << ' ';
     }
