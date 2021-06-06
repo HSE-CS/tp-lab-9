@@ -22,7 +22,7 @@ const int Max_products_quantity = 50;
 //  Classes
 class Customer {
  public:
-    std::vector<long> purchaseVector;
+    std::vector<size_t> purchaseVector;
     Customer();
     ~Customer();
 };
