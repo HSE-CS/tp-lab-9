@@ -8,7 +8,7 @@
 #include <thread>
 #include <vector>
 
-std::vector<std::string> bubbleSortParallel(
+void bubbleSortParallel(
     std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator);
 

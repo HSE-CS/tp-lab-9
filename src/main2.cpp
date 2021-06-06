@@ -12,6 +12,5 @@ int main() {
 
   std::function<bool(std::string, std::string)> comp1 =
       [](std::string x, std::string y) { return x[0] < y[0]; };
-  Strings = bubbleSortParallel(Strings, comp1);
-  print(Strings);
+  bubbleSortParallel(Strings, comp1);
 }

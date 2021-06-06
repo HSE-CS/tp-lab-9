@@ -27,6 +27,11 @@ TEST(lab9, test1) {
 }
 
 TEST(lab9, test2) {
+  std::vector<std::string> Strings = {
+      "Blackjack", "girls", "Futurama", "yes",     "I",  "am",
+      "Bender",    "I",     "mix",      "alcohol", "my", "body",
+      "is",        "like",  "a",        "blender"};
+
   std::function<bool(std::string, std::string)> comp2 =
       [](std::string x, std::string y) { return x.back() < y.back(); };
   Strings = bubbleSort(Strings, comp2);
@@ -38,6 +43,11 @@ TEST(lab9, test2) {
 }
 
 TEST(lab9, test3) {
+  std::vector<std::string> Strings = {
+      "Blackjack", "girls", "Futurama", "yes",     "I",  "am",
+      "Bender",    "I",     "mix",      "alcohol", "my", "body",
+      "is",        "like",  "a",        "blender"};
+
   std::function<bool(std::string, std::string)> comp3 = [](std::string x,
                                                            std::string y) {
     return x[x.size() / 3] < y[y.size() / 3];
@@ -51,6 +61,11 @@ TEST(lab9, test3) {
 }
 
 TEST(lab9, test4) {
+  std::vector<std::string> Strings = {
+      "Blackjack", "girls", "Futurama", "yes",     "I",  "am",
+      "Bender",    "I",     "mix",      "alcohol", "my", "body",
+      "is",        "like",  "a",        "blender"};
+
   std::function<bool(std::string, std::string)> comp4 =
       [](std::string x, std::string y) { return x.size() < y.size(); };
   Strings = bubbleSort(Strings, comp4);
@@ -62,6 +77,11 @@ TEST(lab9, test4) {
 }
 
 TEST(lab9, test5) {
+  std::vector<std::string> Strings = {
+      "Blackjack", "girls", "Futurama", "yes",     "I",  "am",
+      "Bender",    "I",     "mix",      "alcohol", "my", "body",
+      "is",        "like",  "a",        "blender"};
+
   std::function<bool(std::string, std::string)> comp5 =
       [](std::string x, std::string y) { return x < y; };
   Strings = bubbleSort(Strings, comp5);

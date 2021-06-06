@@ -1,9 +1,10 @@
 // Copyright 2021 LongaBonga
-#include "task2.h"
 
 #include "task1.h"
+#include "task2.h"
 
-std::vector<std::string> bubbleSortParallel(
+
+void bubbleSortParallel(
     std::vector<std::string>& vec,
     std::function<bool(std::string, std::string)> comparator) {
   std::vector<std::string> ans(vec);
