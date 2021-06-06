@@ -16,13 +16,11 @@ void fun() {
 
 int main() {
   std::vector<std::string> v;
-//  std::thread t(fun);
   v.push_back("aaaa");
   v.push_back("aaa");
   v.push_back("aa");
   v.push_back("a");
- // t.detach();
-  
+
   std::mutex mtx;
   bool work = 1;
   std::thread thr1(task2, std::ref(v), std::ref(f1), std::ref(work), std::ref(mtx));

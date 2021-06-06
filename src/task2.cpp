@@ -15,7 +15,7 @@ void task2(std::vector<std::string>& toSort,
       }
     }
     mtx.unlock();
-    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
   }
   isWork = false;
 }
@@ -30,6 +30,6 @@ void print_vector(std::vector<std::string>& toPrint, bool &isWork, std::mutex& m
     }
     std::cout << "\n";
     mtx.unlock();
-    std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
   }
 }
