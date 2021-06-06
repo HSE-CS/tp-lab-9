@@ -1,15 +1,13 @@
 // Copyright 2021 SoDa
 
 #include "task2.h"
-#include <fstream>
-#include <iostream>
 
 void bubble_sort_th(std::vector<std::string>& vect,
-    std::function<bool(std::string, std::string)> comp) {
-    extern bool printed; 
-    extern bool sorted; 
-    extern bool step; 
-    extern std::mutex mtx; 
+    std::function<bool(const std::string&, const std::string&)> comp) {
+    extern bool printed;
+    extern bool sorted;
+    extern bool step;
+    extern std::mutex mtx;
     extern cv con_var;
     int size = vect.size();
     for (int i = 0; i < size; i++) {
@@ -26,8 +24,9 @@ void bubble_sort_th(std::vector<std::string>& vect,
         }
     }
     sorted = true;
+}
 
-void print_vct(std::vector<std::string> & vct) {
+void print_vct(const std::vector<std::string>& vct) {
     for (auto x : vct) {
         std::cout << x << ' ';
     }

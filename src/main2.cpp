@@ -1,7 +1,6 @@
 // Copyright 2021 SoDa
 
 #include "task2.h"
-#include <iostream>
 
 std::mutex mtx;
 cv con_var;

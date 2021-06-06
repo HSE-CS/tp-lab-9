@@ -4,18 +4,8 @@
 #include <fstream>
 #include <iostream>
 
-void bubble_sort(std::vector<std::string>& vect, std::function<bool(std::string, std::string)> comp) {
-    int size = vect.size();
-    for (int i = 0; i < size - 1; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
-            if (comp(vect[j], vect[j + 1])) {
-                std::swap(vect[j], vect[j + 1]);
-            }
-        }
-    }
-}
 
-void print_vct(std::vector<std::string>& vect) {
+void print_vct(const std::vector<const std::string>& vect) {
     for (auto word : vect) {
         std::cout << word << ' ';
     }
