@@ -1,7 +1,7 @@
 // Copyright 2021 valvarl
 
 #include <iostream>
-#include "task1.cpp"
+#include "task1.h"
 
 
 int main() {
