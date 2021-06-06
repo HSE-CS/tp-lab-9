@@ -5,10 +5,9 @@
 #include<functional>
 #include<iostream>
 #include<algorithm>
-#include<utility>
 #include <string>
 
-void Sort(const std::vector<std::string>& arr, 
+void Sort(std::vector<std::string>& arr, 
     std::function<bool(std::string, std::string)> comp) {
     int length = arr.size();
     for (int i = 0; i < length - 1; i++) {

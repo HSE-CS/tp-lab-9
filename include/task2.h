@@ -7,7 +7,6 @@
 #include<algorithm>
 #include<mutex>
 #include <string>
-#include <utility>
 
 std::mutex m;
 
@@ -18,8 +17,6 @@ void printArr(std::vector<std::string> arr) {
     }
     std::cout << "\n";
 }
-
-
 
 void Sort2(std::vector<std::string> arr, 
     std::function<bool(std::string, std::string)> comp) {
