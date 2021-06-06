@@ -11,7 +11,7 @@
 class Client {
  public:
   std::vector<unsigned int> products;
-  explicit Client();
+  Client();
 };
 
 void simulation(std::queue<Client *> *_queue);
@@ -22,7 +22,7 @@ class Supermarket {
   std::vector<std::queue<Client *>> clients;
 
  public:
-  explicit Supermarket() = default;
+  Supermarket() = default;
   void createClients();
   void run();
 };

@@ -37,7 +37,7 @@ void simulation(std::queue<Client *> *_queue) {
 void Supermarket::run() {
   createClients();
   for (unsigned int i = 0; i < clients.size(); i++) {
-    threads.push_back(new std::thread(&(clients[i]), i));
+    threads.push_back(new std::thread(simulation, &(clients[i])));
   }
   std::random_device rd;
   std::mt19937 mersenne(rd());
