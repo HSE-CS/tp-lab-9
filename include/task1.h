@@ -1,6 +1,6 @@
 //  Copyright 2021 Nikita Naumov
-#ifndef TASK1_H_
-#define TASK1_H_
+#ifndef INCLUDE_TASK1_H_
+#define INCLUDE_TASK1_H_
 
 #include <iostream>
 #include <string>
@@ -13,4 +13,4 @@ void stringBubbleSort(std::vector<std::string>& strVector,
 
 void printVector(std::vector<std::string> vector);
 
-#endif  //  TASK1_H_
+#endif  //  INCLUDE_TASK1_H_

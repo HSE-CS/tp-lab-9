@@ -17,7 +17,7 @@ void fillVector(std::vector<std::string>* vector) {
 int main() {
     srand(time(NULL));
     std::vector<std::string> strVector;
-//  Fulfilling and copying vector    
+//  Fulfilling and copying vector
     fillVector(&strVector);
     std::vector<std::string> strVector1(strVector),
                             strVector2(strVector),
@@ -26,7 +26,7 @@ int main() {
                             strVector5(strVector);
 
 //  Comparators
-    auto comp1 = [](std::string str1, std::string str2)->bool{ 
+    auto comp1 = [](std::string str1, std::string str2)->bool{
         return (str1.length() > str2.length() ? true : false);
     };
     auto comp2 = [](std::string str1, std::string str2)->bool{
@@ -53,9 +53,9 @@ int main() {
     printVector(strVector);
     std::cout << std::endl << "vect1" << std::endl;
     printVector(strVector1);
-    std::cout << std::endl << "vect2" << std::endl;;
+    std::cout << std::endl << "vect2" << std::endl;
     printVector(strVector2);
-    std::cout << std::endl << "vect3" << std::endl;;
+    std::cout << std::endl << "vect3" << std::endl;
     printVector(strVector3);
     std::cout << std::endl << "vect4" << std::endl;
     printVector(strVector4);

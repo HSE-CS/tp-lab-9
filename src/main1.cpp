@@ -26,7 +26,7 @@ int main() {
                             strVector5(strVector);
 
 //  Comparators
-    auto comp1 = [](std::string str1, std::string str2)->bool{ 
+    auto comp1 = [](std::string str1, std::string str2)->bool{
         return (str1.length() > str2.length() ? true : false);
     };
     auto comp2 = [](std::string str1, std::string str2)->bool{
@@ -41,7 +41,7 @@ int main() {
     auto comp5 = [](std::string str1, std::string str2)->bool{
         return (str1 < str2 ?  true : false);
     };
-    
+
     stringBubbleSort(strVector1, comp1);
     stringBubbleSort(strVector2, comp2);
     stringBubbleSort(strVector3, comp3);
@@ -51,9 +51,9 @@ int main() {
     printVector(strVector);
     std::cout << std::endl << "vect1" << std::endl;
     printVector(strVector1);
-    std::cout << std::endl << "vect2" << std::endl;;
+    std::cout << std::endl << "vect2" << std::endl;
     printVector(strVector2);
-    std::cout << std::endl << "vect3" << std::endl;;
+    std::cout << std::endl << "vect3" << std::endl;
     printVector(strVector3);
     std::cout << std::endl << "vect4" << std::endl;
     printVector(strVector4);

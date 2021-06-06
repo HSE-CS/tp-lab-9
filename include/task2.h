@@ -1,6 +1,6 @@
 //  Copyright 2021 Nikita Naumov
-#ifndef TASK2_H_
-#define TASK2_H_
+#ifndef INCLUDE_TASK2_H_
+#define INCLUDE_TASK2_H_
 
 #include <iostream>
 #include <string>
@@ -15,4 +15,4 @@ void stringBubbleSortWithMutex(std::vector<std::string>& vector,
 
 void printVector(std::vector<std::string> vector);
 
-#endif  //  TASK2_H_
+#endif  //  INCLUDE_TASK2_H_
