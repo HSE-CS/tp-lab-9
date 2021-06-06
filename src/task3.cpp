@@ -42,12 +42,11 @@ void Supermarket::SupermarketRun() {
                 (*buyer)->push(createBuyer());
                 FQ = true;
                 break;
-            }
-            else if ((*buyer) == nullptr) {
+            } else if ((*buyer) == nullptr) {
                 buyers.erase(buyer);
             }
         }
-        if (FQ==false) {
+        if (FQ == false) {
             std::queue <Buyer*>* queue_ptr = new std::queue <Buyer*>;
             queue_ptr->push(this->createBuyer());
             buyers.push_back(queue_ptr);

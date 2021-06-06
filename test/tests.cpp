@@ -15,7 +15,7 @@ TEST(task1, t_1) {
 
 TEST(task1, t_2) {
     std::vector<std::string> vec = { "hello", "book", "language" };
-   bubbleSort(vec, [](std::string& s1, std::string& s2) {
+    bubbleSort(vec, [](std::string& s1, std::string& s2) {
     return s1.size() < s2.size(); });
     std::vector<std::string> expect =
     { "book", "hello", "language" };
@@ -23,8 +23,8 @@ TEST(task1, t_2) {
 }
 
 TEST(task1, t_3) {
-   std::vector<std::string> vec = { "hello", "book", "language" };
-   bubbleSort(vec, [](std::string& s1, std::string& s2) {
+    std::vector<std::string> vec = { "hello", "book", "language" };
+    bubbleSort(vec, [](std::string& s1, std::string& s2) {
     return s1[s1.size() - 1] < s2[s2.size() - 1]; });
     std::vector<std::string> expect =
     { "language", "book", "hello" };
