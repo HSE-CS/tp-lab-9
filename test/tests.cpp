@@ -17,7 +17,7 @@ TEST(task1, t_2) {
     "it", "is", "Final", "God Job", "9" };
     bubble_sort(test_vect, comp_2);
     std::vector<std::string> expect =
-    { "Final", "God Job", "Aboba", "Shampoo", "Biba", "it", "is", "9" };
+    { "God Job", "Aboba", "Shampoo", "Biba", "Final", "it", "is", "9" };
     EXPECT_EQ(expect, test_vect);
 }
 
