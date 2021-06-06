@@ -3,7 +3,7 @@
 
 void print(std::vector<std::string> & vec) {
   for (auto value : vec) {
-    std::cout << value << ' ';
+    std::cout << "\"" << value << "\"" << ", ";
   }
   std::cout << '\n';
 }

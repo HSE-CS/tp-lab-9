@@ -27,15 +27,9 @@ int main() {
   Strings = bubbleSort(Strings, comp4);
   print(Strings);
 
-  std::function<bool(std::string, std::string)> comp5 = [](std::string x, std::string y) {
-    std::reverse(x.begin(), x.end());
-    return x < y;
-  };
-  Strings = bubbleSort(Strings, comp5);
-  print(Strings);
 
-  std::function<bool(std::string, std::string)> comp6 = [](std::string x, std::string y) { return x < y; };
-  Strings = bubbleSort(Strings, comp6);
+  std::function<bool(std::string, std::string)> comp5 = [](std::string x, std::string y) { return x < y; };
+  Strings = bubbleSort(Strings, comp5);
   print(Strings);
 
   return 0;
