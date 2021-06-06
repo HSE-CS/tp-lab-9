@@ -1,8 +1,8 @@
 // Copyright 2021 LongaBonga
 
-#include "task1.h"
 #include "task2.h"
 
+#include "task1.h"
 
 void bubbleSortParallel(
     std::vector<std::string>& vec,
