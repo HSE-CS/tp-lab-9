@@ -2,6 +2,7 @@
 #ifndef INCLUDE_TASK1_H_
 #define INCLUDE_TASK1_H_
 
+#include <algorithm>
 #include <functional>
 #include <iostream>
 #include <string>
