@@ -8,7 +8,7 @@ TEST(TASK1, TEST1) {
 	std::vector<std::string> v_string = { "helllo", "world", "this", "is", "demo" };
 	bubbleSort(v_string, [](std::string& _str1, std::string& _str2) {
 		return _str1.length() > _str2.length(); });
-	std::vector<std::string> result = { "is", "this", "demo", "world", "helllo" };
+	std::vector<std::string> result = { "helllo", "world", "this", "demo", "is" };
 	EXPECT_EQ(result, v_string);
 }
 
@@ -16,8 +16,7 @@ TEST(TASK1, TEST2) {
 	std::vector<std::string> v_string = { "helllo", "world", "this", "is", "demo" };
 	bubbleSort(v_string, [](std::string& _str1, std::string& _str2) {
 		return _str1.length() < _str2.length(); });
-	std::vector<std::string> result =
-	{ "helllo", "world", "this", "demo", "is" };
+	std::vector<std::string> result = { "is", "this", "demo", "world", "helllo" };
 	EXPECT_EQ(result, v_string);
 }
 
