@@ -15,7 +15,7 @@
 class Consumer {
  public:
     std::vector<int> shops;
-    explicit Consumer(std::vector<int> _shops) { shops = _shops; } 
+    explicit Consumer(std::vector<int> _shops) { shops = _shops; }
     void addProduct() { this->shops.push_back(std::rand()); }
     Consumer();
     ~Consumer();
@@ -31,7 +31,7 @@ class Shop {
     int queueLen;
     std::mutex mut;
  public:
-    Shop (int _maxProducts, int _maxPrice, int _maxConsumers, int _queueLen) :
+    Shop(int _maxProducts, int _maxPrice, int _maxConsumers, int _queueLen) :
     maxProducts(_maxProducts), maxPrice(_maxPrice),
     maxConsumers(_maxConsumers), queueLen(_queueLen) {}
     void consumerRun(Consumer* currentConsumer, Shop* curShop);
@@ -41,7 +41,6 @@ class Shop {
     int getMaxPrice() { return maxPrice; }
     int getMaxConsumers() { return maxConsumers; }
     int getQueueLen() { return queueLen; }
-    
 };
 
 #endif  //  INCLUDE_TASK3_H_

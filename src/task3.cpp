@@ -26,7 +26,7 @@ void Shop::consumerRun(Consumer* currentConsumer, Shop* curShop) {
 }
 
 void Shop::queueRun(std::queue<Consumer*> currentConsumers) {
-  while(!(currentConsumers.empty())) {
+  while (!(currentConsumers.empty())) {
     auto currentConsumer = currentConsumers.front();
     consumerRun(currentConsumer, this);
     currentConsumers.pop();
@@ -38,7 +38,8 @@ void Shop::shopRun() {
   while (ConsumerCount < this->getMaxConsumers()) {
     std::this_thread::sleep_for(std::chrono::milliseconds(std::rand() % 501));
     bool flag = false;
-    for (auto i = this->consumerQueues.begin(); i != this->consumerQueues.end(); ++i) {
+    for (auto i = this->consumerQueues.begin();
+    i != this->consumerQueues.end(); ++i) {
       if ((*i)->size() < this->getQueueLen()) {
         flag = !flag;
         (*i)->push(new Consumer());
