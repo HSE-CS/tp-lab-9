@@ -1,8 +1,7 @@
 // Copyright 2021 GHA Test Team
 #include <gtest/gtest.h>
 #include "task1.h"
-#include "task2.h"
-#include "task3.h"
+
 
 TEST(task1, t_1) {
     std::vector<std::string> test_vect = { "Aboba", "Shampoo", "Biba",
