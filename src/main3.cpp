@@ -1,8 +1,7 @@
 // Copyright 2021 LongaBonga
 #include <thread>
-#include "task3.cpp"
-
-
+#include "task3.h"
+#include <unistd.h>
 int main() {
 
     int customers{ static_cast<int>(rand() % 100 + 100) };
