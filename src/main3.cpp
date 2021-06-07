@@ -2,8 +2,8 @@
 
 #include "task3.h"
 
-//int main() {
-//	auto* supermarket = new Seller();
-//	supermarket->start();
-//	return 0;
-//}
+int main() {
+	auto* supermarket = new seller();
+	supermarket->start();
+	return 0;
+}

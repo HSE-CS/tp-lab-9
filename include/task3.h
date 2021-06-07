@@ -10,7 +10,7 @@
 #include <thread>
 
 class Buyer {
-public:
+ public:
     std::vector<int> list;
     explicit Buyer(std::vector<int> _list) { list = std::move(_list); }
 };

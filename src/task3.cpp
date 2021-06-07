@@ -38,8 +38,7 @@ void Seller::start() {
                 (*buyer)->push(buyer_make());
                 FQ = true;
                 break;
-            }
-            else if ((*buyer) == nullptr) buyers.erase(buyer);
+            } else if ((*buyer) == nullptr) buyers.erase(buyer);
         }
         if (!FQ) {
             auto* _queue_ptr = new std::queue <Buyer*>;
