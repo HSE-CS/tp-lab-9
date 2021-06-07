@@ -5,7 +5,6 @@
 #include<algorithm>
 #include<mutex>
 #include<string>
-#include<iostream>
 #include<thread>
 #include<vector>
 #include<functional>
@@ -14,6 +13,6 @@
 
 void BS(std::vector<std::string>& vec,
   const std::function<bool(std::string, std::string)> comp,
-  bool& srt, std::mutex& m,
-  std::condition_variable& c);
+  bool* srt, std::mutex* m,
+  std::condition_variable* c);
 #endif  //  INCLUDE_TASK2_H_

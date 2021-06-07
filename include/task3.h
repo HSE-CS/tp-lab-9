@@ -7,6 +7,7 @@
 #include<set>
 #include<vector>
 #include<thread>
+#include<utility>
 
 struct buyer {
   std::vector<int> purch;

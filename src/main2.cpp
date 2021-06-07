@@ -7,7 +7,7 @@ int main() {
   bool srt{ false };
   std::mutex m;
   std::condition_variable c;
-  std::thread sort([&]() mutable { BS(Vec, comp, srt, m, c); });
+  std::thread sort([&]() mutable { BS(Vec, comp, &srt, &m, &c); });
   while (!srt) {
     std::unique_lock<std::mutex> ul(m);
     c.wait(ul);
