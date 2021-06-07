@@ -21,8 +21,8 @@ TEST(lab9, Task1_test2) {
     "tired", "of", "living", "this", "life"};
   words = BubbleSort(words, [](std::string x, std::string y)
     {return x[0] > y[0]; });
-  std::vector<std::string> expect = {"am", "die", "i", "let", "life", "living",
-  "me", "of", "please", "this", "tired"};
+  std::vector<std::string> expect = {"am", "die", "i", "let", "living",
+  "life", "me", "of", "please", "tired", "this"};
   EXPECT_EQ(expect, words);
 }
 

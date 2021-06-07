@@ -14,6 +14,8 @@ int main() {
         {return x.size() > y.size(); });
     print(words);
     // by first simbol
+    words = {"please", "let", "me", "die", "i", "am",
+    "tired", "of", "living", "this", "life"};
     std::cout << "by first simbol:" << std::endl;
     words = BubbleSort(words, [](std::string x, std::string y)
         {return x[0] > y[0]; });
