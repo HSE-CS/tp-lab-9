@@ -31,7 +31,7 @@ TEST(lab9, test3) {
     return ca < cb;
     });
   std::vector<std::string> expect =
-  { "first", "second", "three", "four", "million", "monday" };
+  { "four", "three", "first", "second", "monday", "million" };
   EXPECT_EQ(expect, Vec);
 }
 
