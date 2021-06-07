@@ -6,7 +6,7 @@ TEST(lab9, test1) {
   { "first", "second", "three", "four", "million", "monday" };
   BS(&Vec, [](std::string a, std::string b) {return a < b; });
   std::vector<std::string> expect =
-  { "first", "second", "three", "four", "million", "monday" };
+  { "first", "four", "million", "monday", "second", "three" };
   EXPECT_EQ(expect, Vec);
 }
 
@@ -15,7 +15,7 @@ TEST(lab9, test2) {
   { "first", "second", "three", "four", "million", "monday" };
   BS(&Vec, [](std::string a, std::string b) {  return a[0] < b[0]; });
   std::vector<std::string> expect =
-  { "first", "second", "three", "four", "million", "monday" };
+  { "first", "four", "million", "monday", "second", "three" };
   EXPECT_EQ(expect, Vec);
 }
 
@@ -47,7 +47,7 @@ TEST(lab9, test4) {
     return A < B;
     });
   std::vector<std::string> expect =
-  { "first", "second", "three", "four", "million", "monday" };
+  { "four", "three", "first", "second", "monday", "million" };
   EXPECT_EQ(expect, Vec);
 }
 
@@ -56,6 +56,6 @@ TEST(lab9, test5) {
   { "first", "second", "three", "four", "million", "monday" };
   BS(&Vec, [](std::string a, std::string b) {return a[1] < b[1]; });
   std::vector<std::string> expect =
-  { "first", "second", "three", "four", "million", "monday" };
+  { "second", "three", "first", "million", "four", "monday" };
   EXPECT_EQ(expect, Vec);
 }
