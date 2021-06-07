@@ -2,8 +2,7 @@
 
 #include "task2.h"
 
-int main()
-{
+int main() {
     std::vector<std::string> source_vector{ "You", "Have", "the",
         "right", "to", "remain", "silent" };
 
@@ -13,6 +12,7 @@ int main()
         return a < b;
     };
 
-    std::vector<std::string> res = bubbleSortTwoThread(source_vector, comparator);
+    std::vector<std::string> res = bubbleSortTwoThread(
+        source_vector, comparator);
     return 0;
 }

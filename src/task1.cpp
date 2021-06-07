@@ -4,8 +4,18 @@
 
 std::vector<std::string> bubbleSort(const std::vector<std::string> &vec,
     std::function<bool(std::string, std::string)> comparator) {
-    sort(vec.begin(), vec.end(), comparator);
-    return vec;
+    std::vector<std::string> res(vec);
+    for (unsigned i = 0; i < res.size(); ++i) {
+        for (unsigned j = 0; j < res.size() - 1; ++j) {
+            if (comparator(res[j], res[j + 1])) {
+                auto temp = res[j];
+                res[j] = res[j + 1];
+                res[j + 1] = temp;
+            }
+        }
+    }
+    // sort(vec.begin(), vec.end(), comparator);
+    return res;
 }
 
 void print(std::vector<std::string> vec) {
