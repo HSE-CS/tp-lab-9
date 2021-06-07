@@ -11,7 +11,7 @@
 #include<iostream>
 
 
-void BS(std::vector<std::string>& vec,
+void BS(std::vector<std::string>* vec,
   const std::function<bool(std::string, std::string)> comp,
   bool* srt, std::mutex* m,
   std::condition_variable* c);

@@ -40,11 +40,11 @@ TEST(lab9, test4) {
   { "first", "second", "three", "four", "million", "monday" };
   BS(&Vec, [](std::string a, std::string b) {
     int A{ 0 }, B{ 0 };
-    for_each(a.begin(), a.end(), [&ca](char ob)
+    for_each(a.begin(), a.end(), [&A](char ob)
       {A += ob >= 'a' && ob <= 'z'; });
-    for_each(b.begin(), b.end(), [&cb](char ob)
-      {cb += ob >= 'a' && ob <= 'z'; });
-    return ca < cb;
+    for_each(b.begin(), b.end(), [&B](char ob)
+      {B += ob >= 'a' && ob <= 'z'; });
+    return A < B;
     });
   std::vector<std::string> expect =
   { "first", "second", "three", "four", "million", "monday" };
