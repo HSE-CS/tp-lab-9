@@ -20,6 +20,7 @@ class Seller {
     std::vector<std::thread*> threads;
     int MN = 10;
  public:
+    Seller() = default;;
     static Buyer* buyer_make();
     void buyer_start(Buyer*, int);
     void queue_start(std::queue <Buyer*>*);

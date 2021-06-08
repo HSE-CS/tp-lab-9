@@ -12,7 +12,7 @@ TEST(test, test_1) {
         const std::string& second_) {
         return first_.length() > second_.length(); });
     std::vector answer = { "wednesday",
-        "saturday", "thursday", "tuesday", "monday", "sunday" ,"friday" };
+        "saturday", "thursday", "tuesday", "monday", "sunday", "friday" };
     EXPECT_EQ(answer, test_1);
 }
 
