@@ -11,7 +11,7 @@ TEST(lab9, Task1_test1) {
     words = BubbleSort(words, [](std::string x, std::string y)
     {return x.size() > y.size(); });
     std::vector<std::string> expect =
-    { "the", "i", "star", "gaze", "world", "am", "my", "might", "lord", "hello", "upon" };
+    { "hello", "world", "i", "am", "the", "star", "lord", "gaze", "upon", "my", "might" };
     EXPECT_EQ(expect, words);
 }
 
@@ -21,7 +21,7 @@ TEST(lab9, Task1_test2) {
     "lord", "gaze", "upon", "my", "might" };
     words = BubbleSort(words, [](std::string x, std::string y)
     {return x[0] > y[0]; });
-    std::vector<std::string> expect = { "star", "am", "the", "world", "upon",
-    "might", "i", "gaze", "hello", "lord", "my" };
+    std::vector<std::string> expect = { "hello", "world", "i", "am", "the", "star",
+    "lord", "gaze", "upon", "my", "might" };
     EXPECT_EQ(expect, words);
 }
