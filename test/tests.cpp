@@ -18,7 +18,7 @@ TEST(task1, sort1){
 
     BubbleSort(strs, [] (const string& a, const string& b){ return a.size() > b.size();});
 
-    EXPECT_EQ("middle", array[1]);
+    EXPECT_EQ("middle", strs[1]);
 
 }
 
@@ -36,8 +36,9 @@ TEST(task2, sort2){
 
 TEST(task3, shop1){
 
-    Shop testShop();
+    Shop testShop;
     testShop.Shopping();
+
 
     EXPECT_EQ(true, true); // Means that Shop is done, nothing had crashed
 
