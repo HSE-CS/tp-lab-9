@@ -1,6 +1,7 @@
 // Copyright 2021 kisozinov
 
 #include "task2.h"
+#include "task2.h"
 
 std::vector<std::string> bubbleSortTwoThread(
     const std::vector<std::string>& vec,
