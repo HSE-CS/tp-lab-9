@@ -1,6 +1,6 @@
 //  Copyright 2021 GHA created by Klykov Anton
 
-#include "include/task1.h"
+#include "task1.h"
 
 void BubbleSort(std::vector<std::string>& vector_string,
                 const std::function<bool(std::string,

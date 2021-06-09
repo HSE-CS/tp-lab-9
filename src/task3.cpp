@@ -1,6 +1,6 @@
 //  Copyright 2021 GHA created by Klykov Anton
 
-#include "include/task3.h"
+#include "task3.h"
 
 Customer::Customer(std::vector<int> &perches_costumer) {
   _perches_costumer = perches_costumer;

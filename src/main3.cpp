@@ -1,6 +1,6 @@
 //  Copyright 2021 GHA created by Klykov Anton
 
-#include "include/task3.h"
+#include "task3.h"
 
 int main() {
   Shop* shop = new Shop(10, 5);

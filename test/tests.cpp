@@ -1,8 +1,12 @@
 // Copyright 2021 GHA Test Team
+
+#include <vector>
+#include <string>
+#include <cstring>
 #include <gtest/gtest.h>
-#include "include/task1.h"
-#include "include/task2.h"
-#include "include/task3.h"
+#include "task1.h"
+#include "task2.h"
+#include "task3.h"
 
 TEST(Task1, test_lexicon) {
   std::vector<std::string> string;

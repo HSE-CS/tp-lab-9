@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <cctype>
-#include "include/task1.h"
+#include "task1.h"
 
 int main() {
   std::vector<std::string> string;

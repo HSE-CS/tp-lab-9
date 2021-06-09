@@ -1,6 +1,6 @@
 //  Copyright 2021 GHA created by Klykov Anton
 
-#include "include/task2.h"
+#include "task2.h"
 
 std::mutex mu;
 std::condition_variable cv;
