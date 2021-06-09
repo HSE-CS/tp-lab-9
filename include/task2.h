@@ -7,8 +7,6 @@
 #include <vector>
 #include <functional>
 #include <string>
-#include <mutex>
-#include <thread>
 #include <algorithm>
 
 void sort(std::vector<std::string> arr,

@@ -3,8 +3,8 @@
 #include "task3.h"
 
 int main() {
-	srand(time(nullptr));
-	Shop shop(15, 40, 10, 5);
-	shop.shopRun();
-	return 0;
+    srand(time(nullptr));
+    Shop shop(15, 40, 10, 5);
+    shop.shopRun();
+    return 0;
 }

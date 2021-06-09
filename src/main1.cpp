@@ -5,8 +5,8 @@
 
 int main() {
     std::cout << "Words: " << std::endl;
-    std::vector<std::string> words = { "hello", "world", "i", "am", "the", "star",
-    "lord", "gaze", "upon", "my", "might" };
+    std::vector<std::string> words = { "hello", "world", "i",
+    "am", "the", "star", "lord", "gaze", "upon", "my", "might" };
     print(words);
 
     std::cout << "by length:" << std::endl;

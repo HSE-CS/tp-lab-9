@@ -7,14 +7,11 @@
 #include <vector>
 #include <queue>
 #include <list>
-#include <mutex>
-#include <thread>
 #include <random>
-#include <chrono>
 
 
 class Consumer {
-public:
+ public:
     std::vector<int> shops;
     explicit Consumer(std::vector<int> _shops) { shops = _shops; }
     void addProduct() { this->shops.push_back(std::rand()); }
@@ -24,7 +21,7 @@ public:
 
 
 class Shop {
-private:
+ private:
     std::vector<std::thread*> myThreads;
     std::vector<std::queue<Consumer*>*> consumerQueues;
     int maxProducts;
@@ -32,7 +29,7 @@ private:
     int maxConsumers;
     int queueLen;
     std::mutex mut;
-public:
+ public:
     Shop(int _maxProducts, int _maxPrice, int _maxConsumers, int _queueLen) :
         maxProducts(_maxProducts), maxPrice(_maxPrice),
         maxConsumers(_maxConsumers), queueLen(_queueLen) {}

@@ -16,10 +16,12 @@ Consumer::~Consumer() {
 void Shop::consumerRun(Consumer* currentConsumer, Shop* curShop) {
     int cnt = 0;
     for (auto s : currentConsumer->shops) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(std::rand() % 1001));
+        std::this_thread::sleep_for(
+            std::chrono::milliseconds(std::rand() % 1001)
+        );
         std::mutex mut;
         mut.lock();
-        std::cout << "Cashdesk " << std::this_thread::get_id() << " Item ¹" <<
+        std::cout << "Cashdesk " << std::this_thread::get_id() << " Item #" <<
             cnt + 1 << std::endl;
         cnt++;
         mut.unlock();
@@ -39,9 +41,11 @@ void Shop::queueRun(std::queue<Consumer*> currentConsumers) {
 void Shop::shopRun() {
     int ConsumerCount = 0;
     while (ConsumerCount < this->getMaxConsumers()) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(std::rand() % 501));
+        std::this_thread::sleep_for(
+            std::chrono::milliseconds(std::rand() % 501)
+        );
         bool flag = false;
-        for (auto i = this->consumerQueues.begin(); 
+        for (auto i = this->consumerQueues.begin();
             i != this->consumerQueues.end(); ++i) {
             if ((*i)->size() < this->getQueueLen()) {
                 flag = !flag;
