@@ -3,7 +3,7 @@
 #include "task3.h"
 
 int main() {
-    auto* test_1 = new seller();
-    test_1->start();
+    Seller test_1;
+    test_1.start();
     return 0;
 }
