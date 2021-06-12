@@ -4,15 +4,15 @@ extern std::mutex mtx;
 extern std::condition_variable cv;
 extern bool finish, printed, sorted;
 int main() {
-    std::vector<std::string> vec = { "weekends", "summer", "hse", "exams", "weekdays", "or" };
+    std::vector<std::string> vec = { "weekends", "summer",
+    "hse", "exams", "weekdays", "or" };
     auto comparator = [](const std::string& a, const std::string& b) {
         return a.size() > b.size();
     };
     std::thread th(BubbleSort, ref(vec), comparator);
-    while (!finish)
-    {
+    while (!finish) {
         std::unique_lock<std::mutex> ul(mtx);
-        cv.wait(ul, []() {return sorted; }); //while(!sorted)
+        cv.wait(ul, []() {return sorted; });
         for (auto str : vec) {
             std::cout << str << " ";
         }

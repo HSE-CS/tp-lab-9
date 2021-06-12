@@ -2,7 +2,8 @@
 #include "task3.h"
 
 Customer::Customer() {
-    int size_prod = rand() % 10 + 5;
+    std::random_device ran;
+    int size_prod = ran() % 10 + 5;
     for (int i = 0; i < size_prod; i++) {
         products.push_back(rand() % 20 + 20);
     }
@@ -32,7 +33,8 @@ void Checkout::serveCust() {
             std::this_thread::sleep_for(std::chrono::milliseconds(prod * 25));
         }
         mtx.lock();
-        std::cout << "Checkout #" << std::this_thread::get_id() << ", customer #" << num++ << " spent " << cnt << std::endl;
+        std::cout << "Checkout #" << std::this_thread::get_id()
+        << ", customer #" << num++ << " spent " << cnt << std::endl;
         mtx.unlock();
         delete customers.front();
         customers.pop();
@@ -45,9 +47,9 @@ Shop::Shop() {
         Customer* cust = new Customer;
         if (checks.back()->getsize() < que_len) {
             checks.back()->addCust(cust);
-        }
-        else {
-            threads.push_back(new std::thread(&Checkout::serveCust, *(checks.back())));
+        } else {
+            threads.push_back(new std::thread(&Checkout::serveCust,
+            *(checks.back())));
             checks.push_back(new Checkout);
             checks.back()->addCust(cust);
         }

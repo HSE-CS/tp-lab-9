@@ -10,6 +10,7 @@
 #define TASK2_H
 #ifdef TASK2_H
 
-void BubbleSort(std::vector<std::string>& arr, bool comparator(const std::string& a, const std::string& b));
+void BubbleSort(std::vector<std::string>& arr,
+bool comparator(const std::string& a, const std::string& b));
 
-#endif //  TASK2_H
+#endif  //  TASK2_H

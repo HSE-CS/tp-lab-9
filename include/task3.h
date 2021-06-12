@@ -5,6 +5,7 @@
 #include <thread>
 #include <mutex>
 #include <queue>
+#include <random>
 #include <chrono>
 #define TASK3_H
 #ifdef TASK3_H
@@ -13,19 +14,19 @@ extern const int que_len;
 extern std::mutex mtx;
 
 class Customer {
-private:
+ private:
     std::vector<int> products;
-public:
+ public:
     Customer();
     std::vector<int> getProds();
 };
 
 class Checkout {
-private:
+ private:
     int size = 0;
     std::queue<Customer*> customers;
-public:
-    Checkout() {};
+ public:
+    Checkout() {}
     void addCust(Customer* cust);
     int getsize();
     void serveCust();
@@ -33,11 +34,11 @@ public:
 
 
 class Shop {
-private:
+ private:
     std::vector<std::thread*> threads;
     std::vector<Checkout*> checks;
-public:
+ public:
     Shop();
     ~Shop();
 };
-#endif //  TASK3_H
+#endif  //  TASK3_H
