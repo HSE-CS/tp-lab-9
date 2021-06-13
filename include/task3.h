@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
-#ifndef INCLUDE_TASK_THIRD_H_
-#define INCLUDE_TASK_THIRD_H_
+#ifndef INCLUDE_TASK3_H_
+#define INCLUDE_TASK3_H_
 
 #include <list>
 #include <mutex>
@@ -48,4 +48,4 @@ class Shop {
     void workWithQueue(std::queue <Client*>*);
 };
 
-#endif  //  INCLUDE_TASK_THIRD_H_
+#endif  //  INCLUDE_TASK3_H_

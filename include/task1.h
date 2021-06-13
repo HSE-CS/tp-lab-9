@@ -1,7 +1,7 @@
 // Copyright 2021 Bogomazov
 
-#ifndef INCLUDE_TASK_FIRST_H_
-#define INCLUDE_TASK_FIRST_H_
+#ifndef INCLUDE_TASK1_H_
+#define INCLUDE_TASK1_H_
 
 #include <string>
 #include <vector>
@@ -28,4 +28,4 @@ void print_vct(std::vector<std::string>);
 void bubbleSort(std::vector<std::string>& vect,
     std::function<bool(std::string, std::string)> comp);
 
-#endif  // INCLUDE_TASK_FIRST_H_
+#endif  // INCLUDE_TASK1_H_

@@ -4,9 +4,6 @@
 #include "../include/task2.h"
 #include "../include/task3.h"
 
-// Copyright 2021 GHA Test Team
-#include <gtest/gtest.h>
-
 std::function<bool(std::string, std::string)> comp_f = [](std::string a,
     std::string b) {
     return a > b;
