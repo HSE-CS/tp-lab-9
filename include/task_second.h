@@ -1,7 +1,7 @@
 // Copyright 2021 Bogomazov
 
-#ifndef INCLUDE_TASK2_H_
-#define INCLUDE_TASK2_H_
+#ifndef INCLUDE_TASK_SECOND_H_
+#define INCLUDE_TASK_SECOND_H_
 
 #include <mutex>
 #include <string>
@@ -21,4 +21,4 @@ void bubbleSortTh(std::vector<std::string>&,
 
 void print_vct(std::vector<std::string>);
 
-#endif  // INCLUDE_TASK2_H_
+#endif  // INCLUDE_TASK_SECOND_H_
