@@ -3,8 +3,8 @@
 std::mutex mtx;
 std::condition_variable cv;
 bool finish(false), printed(true), sorted(false);
-void BubbleSort(std::vector<std::string>& arr,
-bool comparator(std::string& a, const std::string& b)) {
+void BubbleSort(const std::vector<std::string>& arr,
+bool comparator(const std::string& a, const std::string& b)) {
     std::vector<std::string>::iterator pos;
     for (size_t i = 0; i < arr.size() - 1; i++) {
         std::unique_lock<std::mutex> ul(mtx);

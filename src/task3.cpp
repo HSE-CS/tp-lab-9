@@ -5,7 +5,7 @@ Customer::Customer() {
     std::random_device ran;
     int size_prod = ran() % 10 + 5;
     for (int i = 0; i < size_prod; i++) {
-        products.push_back(rand() % 20 + 20);
+        products.push_back(ran() % 20 + 20);
     }
 }
 

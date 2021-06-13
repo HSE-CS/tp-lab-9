@@ -1,7 +1,7 @@
 //  Copyright 2021 by Kartseva Masha
 #include "task1.h"
-void BubbleSort(std::vector<std::string>& arr,
-bool comparator(std::string& a, const std::string& b)) {
+void BubbleSort(const std::vector<std::string>& arr,
+bool comparator(const std::string& a, const std::string& b)) {
     std::vector<std::string>::iterator pos;
     for (size_t i = 0; i < arr.size() - 1; i++) {
         for (size_t j = 0; j < arr.size() - 1 - i; j++) {
