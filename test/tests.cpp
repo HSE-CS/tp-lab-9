@@ -16,7 +16,7 @@ TEST(tests, test1) {
 
     exampleStrings = bubbleSort(exampleStrings, comp_1);
 
-    std::vector<std::string> expected = { "a", "b", "c", "d" };
+    std::vector<std::string> expected = { "d", "c", "b", "a" };
     EXPECT_EQ(expected, exampleStrings);
 }
 
@@ -27,7 +27,7 @@ TEST(tests, test2) {
             [](std::string str1, std::string str2) {
         return str1.back() < str2.back(); };
     exampleStrings = bubbleSort(exampleStrings, comp2);
-    std::vector<std::string> expected = { "a", "b", "c", "d" };
+    std::vector<std::string> expected = { "d", "c", "b", "a" };
     EXPECT_EQ(expected, exampleStrings);
 }
 
@@ -48,6 +48,6 @@ TEST(tests, test4) {
     std::function<bool(std::string, std::string)> comp5 =
             [](std::string x, std::string y) { return x < y; };
     exampleStrings = bubbleSort(exampleStrings, comp5);
-    std::vector<std::string> expected = { "a", "b", "c", "d" };
+    std::vector<std::string> expected = { "d", "c", "b", "a" };
     EXPECT_EQ(expected, exampleStrings);
 }
