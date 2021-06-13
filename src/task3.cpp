@@ -6,7 +6,7 @@
 #include <iostream>
 
 void service(std::deque<std::vector<int>*>* buyers,
-             int a){
+             int a) {
     while (!buyers->empty()) {
         std::ostringstream string;
         string << "{ ";

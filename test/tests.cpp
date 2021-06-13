@@ -8,7 +8,7 @@
 #include "task3.h"
 
 TEST(tests, test1) {
-    std::vector<std::string> exampleString = { "c", "d", "a", "b" };
+    std::vector<std::string> exampleStrings = { "c", "d", "a", "b" };
 
     std::function<bool(std::string, std::string)> comp_1 =
             [](std::string str1, std::string str2) {
