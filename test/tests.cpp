@@ -42,7 +42,7 @@ TEST(Test, test4) {
 
 TEST(Test, test5) {
   std::vector<std::string> arr5 = { "3", "2", "1", "15" };
-  std::vector<std::string> ans5 = { "15", "1", "2", "3" };
+  std::vector<std::string> ans5 = { "1", "15", "2", "3" };
   bubble(arr5, [](std::string& s9, std::string& s10) {
       return s9[0] < s10[0]; });
   EXPECT_EQ(ans5, arr5);
