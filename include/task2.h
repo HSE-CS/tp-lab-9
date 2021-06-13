@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <thread>
+#include <algoriithm>
 #include <mutex>
 #include <condition_variable>
 #include <chrono>

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algoriithm>
 #define TASK1_H
 #ifdef TASK1_H
 void BubbleSort(const std::vector<std::string>& arr,

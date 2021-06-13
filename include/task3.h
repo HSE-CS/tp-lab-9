@@ -4,6 +4,7 @@
 #include <vector>
 #include <thread>
 #include <mutex>
+#include <algoriithm>
 #include <queue>
 #include <random>
 #include <chrono>
