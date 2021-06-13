@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/task_first.h"
+#include "../include/task1.h"
 
 std::function<bool(std::string, std::string)> comp_f = [](std::string a,
     std::string b) {

@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/task_second.h"
+#include "../include/task2.h"
 
 void bubbleSortTh(std::vector<std::string>& vect,
     std::function<bool(const std::string&, const std::string&)> comp) {

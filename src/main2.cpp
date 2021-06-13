@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/task_second.h"
+#include "../include/task2.h"
 
 std::mutex mutexObj;
 cv conVar;

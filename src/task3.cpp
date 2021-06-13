@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/task_third.h"
+#include "../include/task3.h"
 #include <iostream>
 
 
