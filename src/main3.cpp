@@ -9,6 +9,5 @@ std::mutex mtx;
 int main() {
     Shop* magaz = new Shop();
     magaz->~Shop();
-    system("pause");
     return 0;
 }
